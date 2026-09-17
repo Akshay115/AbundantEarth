@@ -2,7 +2,9 @@
 
 A researched, responsive redesign of **abundantearthfoundation.org**, built around local leadership, regenerative growing, and community resilience.
 
-**Status:** implemented and tested locally. The repository contains a deployable static site; it has not been published to the foundation’s domain. Verified payment/signup providers, current organizational details, and production hosting still need to be connected or confirmed. The default build is a clearly labeled, non-indexable preview.
+**Hosted site:** [abundant-earth.vercel.app](https://abundant-earth.vercel.app/)
+
+**Status:** deployed on Vercel directly from this GitHub repository. Pushes to `main` trigger Vercel production deployments. The site remains a clearly labeled, non-indexable redesign preview while verified payment/signup providers and current organizational details are confirmed. The foundation’s custom domain has not been connected.
 
 ![Abundant Earth Foundation homepage](docs/screenshots/home-desktop.webp)
 
@@ -80,12 +82,13 @@ Core content is separated from page templates:
 | `src/data/participation.json` | Volunteer, partnership, and fiscal-sponsorship copy |
 | `src/data/integrations.json` | Public, verified hosted checkout and newsletter URLs |
 | `src/data/redirects.json` | Old-to-new URL mappings |
+| `vercel.json` | Vercel build settings, HTTP 301 redirects, trailing-slash routing, and response headers |
 | `src/pages/financials.astro` | Year-specific public financial records |
 | `src/styles/global.css` | Shared design system and responsive rules |
 
 For a browser-based editor, authorize the repository in [Pages CMS](https://app.pagescms.org/). It reads `.pages.yml` from the selected branch and saves content changes as Git commits. This configuration is included; the external CMS account/GitHub authorization is **not provisioned by this repository**.
 
-Keep project slugs stable. When changing a slug, update story references and add a legacy redirect. Build checks catch missing references and images. Keep figures, reporting dates, and source notes together; never substitute partner-wide results for AEF-attributable results.
+Keep project slugs stable. When changing a slug, update story references and add a legacy redirect in both `src/data/redirects.json` and `vercel.json`. Build checks enforce redirect parity and catch missing references and images. Keep figures, reporting dates, and source notes together; never substitute partner-wide results for AEF-attributable results.
 
 Image fields use an **image family name** such as `food-forest`, `education`, or `gardens`. A family has 480/960/1600 WebP variants in `public/images/`. Regenerate known source images with:
 
@@ -127,19 +130,45 @@ The site does not append guessed Stripe/PayPal parameters, create charges, or cl
 
 Newsletter signup occurs on a verified provider-hosted page, which should handle confirmation, unsubscribing, and subscriber records. Contact forms are intentionally browser-side email-draft helpers, not a message inbox or backend delivery service. The published contact mailbox’s deliverability has not been verified.
 
-## Deploy
+## Vercel deployment — GitHub-backed
 
-1. Connect the GitHub repository to a static hosting service with a **Node 24** build environment.
-2. Set build command to `npm run build` and publish directory to `dist`.
-3. Serve the site at the **root of its domain**. Subpath hosting such as `github.io/AbundantEarth/` is not configured.
-4. Supply verified integration URLs and set `SITE_URL` to the real canonical origin.
-5. Complete the content and ownership items in [operations](docs/OPERATIONS.md).
-6. For the approved production release only, set `PUBLIC_SITE_LIVE=true` and rebuild. This removes the preview notice and allows indexing in meta tags and `robots.txt`.
-7. Connect the domain, enable HTTPS, and verify the public site and inbound donation URLs.
+| Setting | Value |
+|---|---|
+| Public URL | https://abundant-earth.vercel.app/ |
+| Dashboard | https://vercel.com/lyvena/abundant-earth |
+| Vercel team / project | `lyvena` / `abundant-earth` |
+| Project ID | `prj_x8NY9lrCNIvxBE9A7ynM4jiglixi` |
+| GitHub repository | `Akshay115/AbundantEarth` |
+| Production branch | `main` |
+| Framework / runtime | Astro / Node.js 24.x |
+| Install / build / output | `npm ci` / `npm run build` / `dist` |
+| Canonical origin (`SITE_URL`) | `https://abundant-earth.vercel.app` |
+| Indexing (`PUBLIC_SITE_LIVE`) | `false` in production and preview |
 
-The build generates `_redirects` and `_headers` for compatible static hosts. Other hosts should import `src/data/redirects.json` as **HTTP 301 redirects**; Astro also emits HTML meta-refresh fallback pages. Query strings embedded in donation redirects must be preserved. Configure unknown routes to serve `404.html` with HTTP 404 rather than redirecting all paths to the homepage.
+The Vercel CLI was used to create the project, connect the GitHub repository, configure settings, and request the initial deployment through `vercel api /v13/deployments` with a **GitHub `gitSource`**. Vercel fetched commit `e2de311a855adb7cb3f5c8382f6fac43090343e3` from GitHub for that first deployment. No local source upload or prebuilt deployment was used.
 
-No DNS changes, external CMS authorization, payment accounts, newsletter lists, or public hosting resources are created by this code. The CI workflow validates and uploads the site; it does not automatically deploy it.
+### Publish updates
+
+Commit and push changes to GitHub. Vercel’s native Git integration builds `main` into the public project URL, and other branches receive preview deployments. GitHub Actions runs checks separately; it does not upload the production site. Vercel publication is not gated on completion of that separate workflow.
+
+To inspect or reconnect this existing project from another checkout:
+
+```bash
+vercel link --yes --scope lyvena --project abundant-earth
+vercel git connect https://github.com/Akshay115/AbundantEarth --scope lyvena
+vercel list abundant-earth --scope lyvena
+vercel inspect https://abundant-earth.vercel.app --scope lyvena
+```
+
+Keep deployment source in GitHub: publish via Git pushes rather than `vercel deploy`, `vercel --prod`, or `vercel deploy --prebuilt`. Local `.vercel/` and `.env*` credentials are ignored and must not be committed.
+
+`vercel.json` supplies native HTTP 301 redirects, preserves project-specific donation destinations, keeps trailing slashes consistent with Astro, and supplies response headers. The build verifies parity with `src/data/redirects.json`. Unknown paths return the custom `404.html` with HTTP 404. `_redirects` and `_headers` are still generated for other compatible static hosts.
+
+### Move to the foundation’s domain
+
+Connect the approved custom domain in Vercel, update its DNS, and change `SITE_URL` to that canonical origin. Complete the remaining provider/content items in [operations](docs/OPERATIONS.md). When the foundation is ready for indexing, set `PUBLIC_SITE_LIVE=true` for production only and trigger a fresh Git-backed deployment. Keep preview environments non-indexable.
+
+Payment accounts, newsletter subscriptions, external CMS authorization, and the foundation’s DNS are not configured by this deployment.
 
 ## Research and editorial basis
 

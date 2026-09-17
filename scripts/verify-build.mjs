@@ -5,6 +5,7 @@ import projects from '../src/data/projects.json' with { type: 'json' };
 import stories from '../src/data/stories.json' with { type: 'json' };
 import redirects from '../src/data/redirects.json' with { type: 'json' };
 import integrations from '../src/data/integrations.json' with { type: 'json' };
+import vercel from '../vercel.json' with { type: 'json' };
 import { httpsUrl } from '../src/lib/integrations.mjs';
 
 const root = 'dist';
@@ -62,6 +63,11 @@ for (const [file, html] of content) {
 for (const [from, to] of Object.entries(redirects)) {
   if (!targetFile(new URL(to, site).pathname)) errors.push(`Redirect ${from} has missing target ${to}`);
 }
+assert.deepEqual(
+  vercel.redirects,
+  Object.entries(redirects).map(([source, destination]) => ({ source, destination, statusCode: 301 })),
+  'Keep Vercel HTTP redirects synchronized with src/data/redirects.json',
+);
 // Hosts supporting _redirects get real HTTP 301s; generated HTML handles other static hosts.
 await writeFile(join(root, '_redirects'), Object.entries(redirects).map(([from, to]) => `${from} ${to} 301`).join('\n') + '\n');
 await writeFile(join(root, '_headers'), '/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n\n/_astro/*\n  Cache-Control: public, max-age=31536000, immutable\n');
