@@ -1,0 +1,91 @@
+media:
+  input: public/images
+  output: /images
+content:
+  - name: site
+    label: Foundation settings & impact
+    type: file
+    path: src/data/site.json
+    format: json
+    fields:
+      - { name: name, label: Foundation name, type: string, required: true }
+      - { name: tagline, type: string }
+      - { name: description, type: text, required: true }
+      - { name: email, type: string, required: true }
+      - { name: ein, label: EIN, type: string }
+      - { name: researchDate, type: string }
+      - { name: impactAsOf, type: string }
+      - name: impact
+        type: object
+        list: true
+        fields:
+          - { name: value, type: string, required: true }
+          - { name: label, type: string, required: true }
+      - { name: impactSource, type: string, required: true }
+      - { name: applicationsStatus, type: select, options: { values: [unconfirmed, open, closed] } }
+      - { name: applicationsMessage, type: text, required: true }
+      - name: social
+        type: object
+        list: true
+        fields:
+          - { name: name, type: string }
+          - { name: url, type: string }
+  - name: projects
+    label: Project directory
+    type: file
+    path: src/data/projects.json
+    format: json
+    list: true
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: name, type: string, required: true }
+      - { name: shortName, label: Story headline, type: string, required: true }
+      - { name: location, type: string, required: true }
+      - { name: countries, type: string, list: true }
+      - { name: theme, type: select, options: { values: ['Food & forests', 'Community resilience', 'Youth & learning'] } }
+      - { name: status, type: string, required: true }
+      - { name: featured, type: boolean }
+      - { name: image, label: Image family (see README), type: string, required: true }
+      - { name: imageAlt, type: string, required: true }
+      - { name: imageCaption, type: string, required: true }
+      - { name: summary, type: text, required: true }
+      - { name: leader, type: string, required: true }
+      - { name: challenge, type: text }
+      - { name: approach, type: text }
+      - { name: support, type: text }
+      - { name: outcomes, type: string, list: true }
+      - { name: outcomeNote, type: text, required: true }
+      - { name: source, type: string, required: true }
+      - { name: externalUrl, type: string }
+  - name: stories
+    label: Stories
+    type: file
+    path: src/data/stories.json
+    format: json
+    list: true
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: title, type: string, required: true }
+      - { name: category, type: string }
+      - { name: image, type: string, required: true }
+      - { name: imageAlt, type: string, required: true }
+      - { name: summary, type: text }
+      - { name: project, label: Related project slug, type: string, required: true }
+      - { name: sourceDate, label: Historical reporting period, type: string }
+      - { name: paragraphs, type: text, list: true }
+  - name: integrations
+    label: Verified provider links
+    type: file
+    path: src/data/integrations.json
+    format: json
+    fields:
+      - { name: donationUrl, label: General one-time checkout URL, type: string }
+      - { name: monthlyDonationUrl, label: General monthly checkout URL, type: string }
+      - { name: newsletterUrl, label: Hosted newsletter signup URL, type: string }
+      - name: projectDonationUrls
+        type: object
+        list: true
+        fields:
+          - { name: slug, label: Project slug, type: string, required: true }
+          - { name: oneTimeUrl, type: string }
+          - { name: monthlyUrl, type: string }

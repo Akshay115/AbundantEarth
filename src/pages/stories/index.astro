@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { stories } from '../../lib/content';
+---
+<Layout title="Stories from the field"><PageIntro eyebrow="Voices, ideas, and possibility" title="From the ground up." description="A closer look at the ideas and community-led work in AEF’s archive. These are editorial retellings of documented projects, not new field reports." /><section class="section container"><div class="story-grid">{stories.map(story => <StoryCard story={story} />)}</div></section><Newsletter /></Layout>

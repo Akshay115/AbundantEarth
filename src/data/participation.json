@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "volunteer",
+    "title": "Your skills can help good things grow.",
+    "eyebrow": "Volunteer with Abundant Earth",
+    "description": "Bring your time, care, and experience to a conversation about supporting community-led change.",
+    "heading": "There is more than one way to contribute.",
+    "paragraphs": ["AEF’s archived volunteer page welcomes people who can help grassroots projects access additional resources. It also invites inquiries about internships in environmental philanthropy.", "Potential contributions to discuss include writing and editing, project research, photography and media support, fundraising, and organizing information. These are conversation starters, not advertised current vacancies."],
+    "items": ["Tell us which skills you would like to share.", "Let us know your availability and where you are based.", "Share any relevant experience or examples of your work."],
+    "note": "Current opportunities, supervision, and time commitments need to be confirmed with the team. There is no promise of placement or travel attached to this inquiry.",
+    "topic": "Volunteering"
+  },
+  {
+    "slug": "partnerships",
+    "title": "Connect your strengths to local possibility.",
+    "eyebrow": "Build a meaningful partnership",
+    "description": "Bring people, knowledge, and resources together around practical, community-led environmental work.",
+    "heading": "Shared purpose. Complementary strengths.",
+    "paragraphs": ["AEF’s documented approach brings together local leaders, educators, funders, and regenerative agriculture networks. A good partnership starts with understanding where our missions and capabilities meet.", "Whether you are part of a foundation, an educational institution, a business, or a community organization, start with the contribution you can make and the kind of work you hope to support."],
+    "items": ["Funding or in-kind resources for mission-aligned work.", "Educational expertise, mentoring, or practical training.", "Connections that help locally led projects reach relevant supporters."],
+    "note": "Specific partnership arrangements, funding restrictions, and recognition are agreed with the foundation directly.",
+    "topic": "Partnership"
+  },
+  {
+    "slug": "fiscal-sponsorship",
+    "title": "A stronger foundation for your idea.",
+    "eyebrow": "Understanding fiscal sponsorship",
+    "description": "Explore whether a nonprofit relationship could help a mission-aligned project access funding and practical support.",
+    "heading": "What does fiscal sponsorship mean?",
+    "paragraphs": ["Fiscal sponsorship is a formal arrangement in which a nonprofit supports a charitable project under an agreed structure. The sponsor retains responsibilities for the charitable funds it receives; this is more than simply lending a tax-exempt number.", "AEF’s archived donation and application pages describe fiscal sponsorship as one form of support. Availability, fit, fees, oversight, and reporting requirements must be discussed with the team before a project begins fundraising through AEF."],
+    "items": ["Explain your project’s purpose, leadership, and location.", "Describe your existing organization and any nonprofit status.", "Ask about the agreement, fees, reporting, and handling of restricted donations.", "Agree the relationship before representing a project as sponsored by AEF."],
+    "note": "This page explains the concept. It does not establish sponsorship, guarantee eligibility, or state that new projects are currently being accepted.",
+    "topic": "Fiscal sponsorship"
+  }
+]

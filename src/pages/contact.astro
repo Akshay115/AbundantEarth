@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import InquiryForm from '../components/InquiryForm.astro';
+import { site } from '../lib/content';
+---
+<Layout title="Contact us"><PageIntro eyebrow="Good things begin with a conversation" title="Let’s grow a connection." description="A question, an idea, a project update, or an introduction—we’d like to help you find the right next step." /><section class="section container two-column"><div class="prose"><h2>Reach out directly.</h2><p><a href={`mailto:${site.email}`} style="overflow-wrap:anywhere">{site.email}</a></p><p>This address is published in AEF’s archived materials. Email delivery depends on the foundation’s current mailbox availability.</p><h3>A few helpful starting points</h3><ul><li><a href="/get-support/">Explore project support</a> before preparing a funding request.</li><li><a href="/fiscal-sponsorship/">Learn about fiscal sponsorship</a> for a longer-term relationship.</li><li><a href="/financials/">Find public financial records</a> and organizational information.</li></ul><h3>Find us in the community.</h3><div class="social-links">{site.social.map(s => <a href={s.url}>{s.name} ↗</a>)}</div></div><InquiryForm /></section></Layout>

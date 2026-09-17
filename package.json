@@ -1,0 +1,30 @@
+{
+  "name": "abundant-earth-foundation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/verify-build.mjs",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "playwright test",
+    "test:unit": "node --test tests/*.test.mjs",
+    "test:providers": "node scripts/test-providers.mjs",
+    "media": "node scripts/fetch-media.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.3.3",
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.63.0",
+    "sharp": "^0.35.4",
+    "typescript": "^5.9.3"
+  }
+}

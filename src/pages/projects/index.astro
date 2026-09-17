@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { projects } from '../../lib/content';
+const countries = [...new Set(projects.flatMap(p => p.countries))].sort();
+const themes = [...new Set(projects.map(p => p.theme))];
+---
+<Layout title="Our projects" description="Meet the locally led projects in Abundant Earth Foundation’s documented network. Explore food forests, youth education, and community resilience.">
+  <PageIntro eyebrow="Our work, rooted in place" title="Many communities. One living Earth." description="Discover the people and projects growing food, restoring landscapes, and creating possibilities for the next generation." />
+  <section class="section container directory" id="directory">
+    <div class="filter-panel" hidden data-filters>
+      <div class="filter-fields"><label>Find a project<input id="project-search" type="search" placeholder="Try a project, place, or idea…" autocomplete="off" /></label><label>Focus area<select id="theme-filter"><option value="">All focus areas</option>{themes.map(theme => <option>{theme}</option>)}</select></label><label>Country<select id="country-filter"><option value="">All countries</option>{countries.map(country => <option>{country}</option>)}</select></label></div>
+      <div class="filter-bottom"><p id="result-count" role="status" aria-live="polite">{projects.length} projects</p><button type="button" id="reset-filters">Clear filters</button></div>
+    </div>
+    <noscript><p class="notice">All projects are listed below. Use your browser’s Find feature to search by name or location.</p></noscript>
+    <div class="project-grid">{projects.map(project => <ProjectCard project={project} />)}</div>
+    <div class="empty-state" id="empty-state" hidden><h2>No projects found.</h2><p>Try another search, focus area, or country.</p><button type="button" class="button button-outline" id="empty-reset">Show all projects</button></div>
+    <p class="section-note">This is a curated directory, not the full historical grant ledger. Profiles reflect the cited archives. Current activity and funding needs have not yet been reverified.</p>
+    <aside class="map-panel"><p class="eyebrow">Explore by place</p><h2>Local roots, around the world.</h2><p>Start with a country to discover the projects connected to it.</p><div class="country-links">{countries.map(country => <a href={`/projects/?country=${encodeURIComponent(country)}#directory`}>{country}</a>)}</div></aside>
+  </section>
+  <Newsletter />
+  <script>
+    const search = document.querySelector<HTMLInputElement>('#project-search')!;
+    const theme = document.querySelector<HTMLSelectElement>('#theme-filter')!;
+    const country = document.querySelector<HTMLSelectElement>('#country-filter')!;
+    const cards = [...document.querySelectorAll<HTMLElement>('[data-project-card]')];
+    const params = new URLSearchParams(location.search);
+    search.value = params.get('q') || '';
+    theme.value = params.get('theme') || '';
+    country.value = params.get('country') || '';
+    function filter(updateUrl = true) {
+      let visible = 0;
+      cards.forEach(card => {
+        const match = (card.dataset.search || '').includes(search.value.trim().toLowerCase()) && (!theme.value || card.dataset.theme === theme.value) && (!country.value || card.dataset.countries?.split('|').includes(country.value));
+        card.hidden = !match;
+        if (match) visible++;
+      });
+      document.querySelector('#result-count')!.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'} found`;
+      document.querySelector<HTMLElement>('#empty-state')!.hidden = visible !== 0;
+      if (updateUrl) {
+        const query = new URLSearchParams();
+        if (search.value.trim()) query.set('q', search.value.trim());
+        if (theme.value) query.set('theme', theme.value);
+        if (country.value) query.set('country', country.value);
+        history.replaceState(null, '', `${location.pathname}${query.size ? `?${query}` : ''}${location.hash}`);
+      }
+    }
+    function reset() { search.value = ''; theme.value = ''; country.value = ''; filter(); search.focus(); }
+    search.addEventListener('input', () => filter());
+    theme.addEventListener('change', () => filter());
+    country.addEventListener('change', () => filter());
+    document.querySelector('#reset-filters')?.addEventListener('click', reset);
+    document.querySelector('#empty-reset')?.addEventListener('click', reset);
+    document.querySelector<HTMLElement>('[data-filters]')!.hidden = false;
+    filter(false);
+  </script>
+</Layout>

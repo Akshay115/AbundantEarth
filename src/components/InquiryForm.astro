@@ -1,0 +1,52 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../lib/content';
+interface Props { topic?: string; compact?: boolean; }
+const { topic = 'General inquiry', compact = false } = Astro.props;
+const topics = ['General inquiry', 'Project support', 'Fiscal sponsorship', 'Volunteering', 'Partnership', 'Giving', 'Project update', 'Financial records', 'Newsletter'];
+---
+<div class="form-card" data-inquiry data-email={site.email}>
+  <h2>Start a conversation.</h2><p>This form prepares an email for you to review and send. Nothing is submitted or stored by this website.</p>
+  <form class="form-stack" data-inquiry-form>
+    <div class="form-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100" /></label><label>Email address<input type="email" name="email" autocomplete="email" required maxlength="200" /></label></div>
+    <label>What would you like to discuss?<select name="topic">{topics.map(t => <option selected={t === topic}>{t}</option>)}</select></label>
+    {!compact && <div class="form-row"><label>Project or organization <span class="form-help">Optional</span><input name="project" maxlength="150" autocomplete="organization" /></label><label>Country <span class="form-help">Optional</span><input name="country" maxlength="80" autocomplete="country-name" /></label></div>}
+    <label>Your message<textarea name="message" required minlength="10" maxlength="2500" placeholder="Tell us a little about your idea and how we might connect." /></label>
+    <label class="check-label"><input type="checkbox" required name="consent" /><span>I understand that I will review and send this message using my email app. <a href="/privacy/">Privacy information</a></span></label>
+    <button class="button" type="submit" disabled data-prepare>Prepare my email <Icon /></button>
+  </form>
+  <noscript><p class="notice">To get in touch, email <a href={`mailto:${site.email}`}>{site.email}</a>. The email-draft helper needs JavaScript.</p></noscript>
+  <div class="draft-result" data-draft-result hidden tabindex="-1"><h3>Your draft is ready.</h3><p>Review the message, then open your email app to send it to <strong>{site.email}</strong>. It has not been sent yet.</p><label>Message preview<textarea readonly data-draft-text /></label><div class="button-row"><a class="button" data-email-link href={`mailto:${site.email}`}>Open email app <Icon /></a><button class="button button-outline" type="button" data-copy>Copy message</button></div><p class="form-help" role="status" data-copy-status>If your email app does not open, copy this message and send it to the address above.</p></div>
+</div>
+<script>
+  import { emailDraft } from '../lib/integrations.mjs';
+  document.querySelectorAll<HTMLElement>('[data-inquiry]').forEach(root => {
+    const form = root.querySelector<HTMLFormElement>('form')!;
+    const params = new URLSearchParams(location.search);
+    const topicField = form.elements.namedItem('topic') as HTMLSelectElement;
+    const requestedTopic = params.get('topic');
+    if (requestedTopic && [...topicField.options].some(option => option.value === requestedTopic)) topicField.value = requestedTopic;
+    const projectField = form.elements.namedItem('project') as HTMLInputElement | null;
+    if (projectField) projectField.value = (params.get('project') || '').slice(0, 150);
+    root.querySelector<HTMLButtonElement>('[data-prepare]')!.disabled = false;
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const value = (name: string) => String(data.get(name) || '').trim();
+      const subject = `AEF: ${value('topic')}`;
+      const body = `Hello Abundant Earth Foundation,\n\n${value('message')}\n\nName: ${value('name')}\nEmail: ${value('email')}${value('project') ? `\nProject / organization: ${value('project')}` : ''}${value('country') ? `\nCountry: ${value('country')}` : ''}`;
+      root.querySelector<HTMLTextAreaElement>('[data-draft-text]')!.value = body;
+      root.querySelector<HTMLAnchorElement>('[data-email-link]')!.href = emailDraft(root.dataset.email!, subject, body);
+      const result = root.querySelector<HTMLElement>('[data-draft-result]')!;
+      result.hidden = false;
+      result.focus();
+    });
+    root.querySelector('[data-copy]')?.addEventListener('click', async () => {
+      const textarea = root.querySelector<HTMLTextAreaElement>('[data-draft-text]')!;
+      const status = root.querySelector('[data-copy-status]')!;
+      try { await navigator.clipboard.writeText(textarea.value); status.textContent = 'Message copied. Paste it into your email app to send.'; }
+      catch { textarea.focus(); textarea.select(); status.textContent = 'Select and copy the message above, then paste it into your email app.'; }
+    });
+  });
+</script>

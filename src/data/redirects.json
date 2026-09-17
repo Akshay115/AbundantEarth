@@ -1,0 +1,17 @@
+{
+  "/about-us/": "/about/",
+  "/our-team/": "/about/#team",
+  "/projects-we-support/": "/projects/",
+  "/agroforestry-regeneration-communities/": "/projects/agroforestry-regeneration-communities/",
+  "/tge/": "/projects/towards-green-environment/",
+  "/bod/": "/projects/beyond-organic-design/",
+  "/how-to-apply-for-funding/": "/get-support/",
+  "/abundant-earth-foundation-newsletter-signup/": "/newsletter/",
+  "/aef-privacy-policy/": "/privacy/",
+  "/category/recent-news/": "/stories/",
+  "/podcasts/": "/resources/",
+  "/donations/donate-to-agroforestry-regeneration-communities/": "/donate/?project=agroforestry-regeneration-communities",
+  "/donations/donate-to-regenerative-holistic-resource-center/": "/donate/?project=regenerative-holistic-resource-center",
+  "/donations/donate-to-towards-green-environment/": "/donate/?project=towards-green-environment",
+  "/donations/donate-to-beyond-organic-design/": "/donate/?project=beyond-organic-design"
+}

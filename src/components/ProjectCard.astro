@@ -1,0 +1,20 @@
+---
+import type { Project } from '../lib/content';
+import Icon from './Icon.astro';
+import Photo from './Photo.astro';
+interface Props { project: Project; }
+const { project } = Astro.props;
+---
+<article class="project-card" data-project-card data-search={`${project.name} ${project.location} ${project.summary} ${project.countries.join(' ')}`.toLowerCase()} data-theme={project.theme} data-countries={project.countries.join('|')} data-status={project.status}>
+  <a class="card-image-link" href={`/projects/${project.slug}/`} tabindex="-1" aria-hidden="true">
+    <Photo name={project.image} alt="" sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" />
+    <span class="image-tag">{project.theme}</span>
+    <span class="image-arrow"><Icon /></span>
+  </a>
+  <div class="card-copy">
+    <p class="location"><Icon name="pin" />{project.location}</p>
+    <h3><a href={`/projects/${project.slug}/`}>{project.shortName}</a></h3>
+    <p>{project.summary}</p>
+    <p class="project-name">{project.name}</p>
+  </div>
+</article>

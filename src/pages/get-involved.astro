@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Icon from '../components/Icon.astro';
+import Newsletter from '../components/Newsletter.astro';
+const opportunities = [
+  ['Give', 'Resource the next step.', 'Help connect community-led projects with the resources and relationships they need.', '/donate/', 'Explore giving'],
+  ['Volunteer', 'Bring what you know.', 'Share your skills in communications, research, storytelling, or project support.', '/volunteer/', 'Explore volunteering'],
+  ['Partner', 'Make a connection.', 'Connect your organization, network, or expertise with grassroots work.', '/partnerships/', 'Start a partnership conversation'],
+  ['Get support', 'Share your idea.', 'Ask about resources for a locally led regenerative or community project.', '/get-support/', 'Explore project support'],
+  ['Fiscal sponsorship', 'Build a relationship.', 'Learn how a nonprofit partnership can support a mission-aligned initiative.', '/fiscal-sponsorship/', 'Learn about sponsorship'],
+  ['Stay connected', 'Keep the ideas growing.', 'Follow field stories and ways to participate in a more abundant future.', '/newsletter/', 'Stay in the loop'],
+];
+---
+<Layout title="Get involved"><PageIntro eyebrow="There is a place for you here" title="Many ways to help something grow." description="Time, resources, knowledge, and connections all make a difference. Find a way to take part that feels right for you." /><section class="section container"><div class="feature-grid" style="margin-top:0">{opportunities.map(([eyebrow, title, description, href, label]) => <article class="feature-card"><p class="eyebrow">{eyebrow}</p><h2 style="font-size:1.85rem;margin-bottom:16px">{title}</h2><p>{description}</p><a class="text-link" href={href}>{label} <Icon /></a></article>)}</div></section><Newsletter /></Layout>

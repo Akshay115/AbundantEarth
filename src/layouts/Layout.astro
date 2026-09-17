@@ -1,0 +1,85 @@
+---
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import '@fontsource/dm-sans/600.css';
+import '@fontsource-variable/fraunces';
+import '../styles/global.css';
+import { site } from '../lib/content';
+import Icon from '../components/Icon.astro';
+interface Props { title: string; description?: string; image?: string; noindex?: boolean; }
+const { title, description = site.description, image = '/images/food-forest-1600.webp', noindex = false } = Astro.props;
+const live = import.meta.env.PUBLIC_SITE_LIVE === 'true';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const nav = [['Our work', '/projects/'], ['Our impact', '/impact/'], ['About us', '/about/'], ['Get involved', '/get-involved/']];
+const isActive = (url: string) => Astro.url.pathname.startsWith(url);
+const structuredData = { '@context': 'https://schema.org', '@type': 'NGO', name: site.name, url: Astro.site?.href, description: site.description, email: site.email, sameAs: site.social.map(s => s.url) };
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#254b3d" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex || !live ? 'noindex, nofollow' : 'index, follow'} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | ${site.name}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:site_name" content={site.name} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title} | {site.name}</title>
+    <noscript><style>@media(max-width:900px){.menu-toggle{display:none!important}.header-inner{flex-wrap:wrap;padding-block:18px}.main-nav{display:flex!important;position:static!important;flex-wrap:wrap;padding:0!important;box-shadow:none!important;border:0!important;gap:10px!important}}</style></noscript>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\u003c')} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="topbar"><div class="container"><span>Rooted in community. Growing a better world.</span><a href="/get-support/">Looking for project support? <span aria-hidden="true">↗</span></a></div></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Abundant Earth Foundation home"><span class="brand-icon"><Icon name="leaf" /></span><span>abundant earth<small>F O U N D A T I O N</small></span></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><Icon name="menu" /><span>Menu</span></button>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          {nav.map(([label, url]) => <a href={url} aria-current={isActive(url) ? 'page' : undefined}>{label}</a>)}
+          <a href="/donate/" class="button button-small">Donate <Icon name="heart" /></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand"><a class="brand" href="/"><span class="brand-icon"><Icon name="leaf" /></span><span>abundant earth<small>F O U N D A T I O N</small></span></a><p>A healthier Earth begins with<br />thriving communities.</p><div class="social-links">{site.social.map(s => <a href={s.url} rel="noopener noreferrer">{s.name}</a>)}</div></div>
+        <div><h2>Explore</h2><a href="/projects/">Our projects</a><a href="/impact/">Our impact</a><a href="/stories/">Stories from the field</a><a href="/resources/">Learning & resources</a></div>
+        <div><h2>Take part</h2><a href="/donate/">Make a gift</a><a href="/get-support/">Get project support</a><a href="/volunteer/">Volunteer with us</a><a href="/partnerships/">Become a partner</a><a href="/fiscal-sponsorship/">Fiscal sponsorship</a></div>
+        <div><h2>Get to know us</h2><a href="/about/">Our story & team</a><a href="/financials/">Financials & transparency</a><a href="/contact/">Contact us</a><a href="/newsletter/">Stay connected</a></div>
+      </div>
+      <div class="container footer-bottom"><span>© {new Date().getFullYear()} Abundant Earth Foundation · EIN {site.ein}</span><div><a href="/privacy/">Privacy</a><a href="/accessibility/">Accessibility</a><a href="/sources/">Sources & credits</a></div></div>
+      {!live && <div class="preview-note">Redesign preview · Historical content is dated throughout. Online payments and subscriptions require verified provider setup.</div>}
+    </footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const nav = document.querySelector<HTMLElement>('#main-nav');
+      function closeMenu() {
+        toggle?.setAttribute('aria-expanded', 'false');
+        toggle?.setAttribute('aria-label', 'Open navigation');
+        nav?.classList.remove('is-open');
+      }
+      toggle?.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+        nav?.classList.toggle('is-open', open);
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); }
+      });
+      document.addEventListener('click', (event) => {
+        if (event.target instanceof Node && !document.querySelector('.site-header')?.contains(event.target)) closeMenu();
+      });
+      matchMedia('(min-width: 901px)').addEventListener('change', closeMenu);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import InquiryForm from '../components/InquiryForm.astro';
+import pages from '../data/participation.json';
+export function getStaticPaths() { return pages.map(page => ({ params: { participation: page.slug }, props: { page } })); }
+const { page } = Astro.props;
+---
+<Layout title={page.eyebrow} description={page.description}><PageIntro eyebrow={page.eyebrow} title={page.title} description={page.description} /><section class="section container two-column"><div class="prose"><h2>{page.heading}</h2>{page.paragraphs.map(p => <p>{p}</p>)}<h3>Start with a few details.</h3><ul>{page.items.map(item => <li>{item}</li>)}</ul><div class="notice">{page.note}</div></div><InquiryForm topic={page.topic} /></section></Layout>

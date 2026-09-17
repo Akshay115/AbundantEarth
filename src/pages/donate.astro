@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Icon from '../components/Icon.astro';
+import Photo from '../components/Photo.astro';
+import { site, projects } from '../lib/content';
+import { donationUrl, monthlyDonationUrl, projectDonationUrls } from '../lib/config';
+---
+<Layout title="Support the work" description="Explore ways to support Abundant Earth Foundation and its community-led projects. Find clear information about one-time and monthly giving.">
+  <PageIntro eyebrow="Help possibility take root" title="A little support can grow a long way." description="Help connect local leaders with the resources to restore nature, nourish communities, and share what they know." />
+  <section class="section container two-column">
+    <div class="prose"><h2>Give to the roots of change.</h2><p>AEF’s documented support includes small grants, teaching, practical resources, and connections for grassroots initiatives. A gift can help make the next step possible.</p><figure style="margin-block:30px"><Photo name="seedlings" alt="Young plants growing at Permaculture Paradise Institute in Malawi" class="wide-photo" /><figcaption>Permaculture Paradise Institute, Malawi · ARC network</figcaption></figure><h3>Know the work you support.</h3><p>Explore the project stories and public financial records. Historical achievements are labeled with their reporting context.</p><a class="text-link" href="/financials/">Financials & transparency <Icon /></a></div>
+    <div><div class="form-card" id="giving-card" data-email={site.email} data-one-time={donationUrl} data-monthly={monthlyDonationUrl} data-project-urls={JSON.stringify(projectDonationUrls)}>
+      <p class="eyebrow">A gift with roots</p><h2>How would you like to help?</h2><p>Explore giving options or ask the team about a project’s current needs.</p>
+      <form class="form-stack" id="giving-form">
+        <fieldset><legend>Giving frequency</legend><div class="choice-group"><label class="choice"><input type="radio" name="frequency" value="once" checked /><span>One time</span></label><label class="choice"><input type="radio" name="frequency" value="monthly" /><span>Monthly</span></label></div></fieldset>
+        <label>Area of interest<select name="project" id="giving-project"><option value="">Where support is needed</option>{projects.map(project => <option value={project.slug}>{project.name}</option>)}</select></label>
+        <div class="donation-summary" aria-live="polite"><strong id="giving-heading">Support community-led change.</strong><p id="giving-description">Ask about a one-time gift to the foundation.</p></div>
+        <p class="notice" id="giving-availability">{donationUrl ? 'Choose your donation amount and confirm all details on the payment provider’s checkout page.' : 'Online checkout is not connected in this preview. You can prepare an inquiry about giving; this website does not collect payment details.'}</p>
+        <button type="submit" class="button" id="giving-submit" disabled>{donationUrl ? 'Continue to secure checkout' : 'Prepare a giving inquiry'} <Icon /></button>
+        <p class="form-help">We never collect card information on this website. A giving inquiry does not create a donation or recurring commitment.</p>
+      </form>
+      <noscript><p class="notice">{donationUrl ? <a href={donationUrl}>Visit the verified donation provider</a> : <a href={`mailto:${site.email}?subject=Giving%20inquiry`}>Email the foundation about giving</a>}. The options selector requires JavaScript.</p></noscript>
+      <div class="draft-result" id="giving-result" hidden tabindex="-1"><h3>Your giving inquiry is ready.</h3><p>No donation has been made. Open your email app to review and send this message.</p><label>Message preview<textarea id="giving-preview" readonly /></label><a class="button" id="giving-email" href={`mailto:${site.email}`}>Open email app <Icon /></a><p class="form-help">Or copy the message and email it to {site.email}.</p></div>
+    </div><p class="source-note">AEF is listed as a US 501(c)(3), EIN {site.ein}. Any tax treatment depends on the donation and your circumstances; confirm details with the foundation.</p></div>
+  </section>
+  <section class="section container" style="padding-top:0;max-width:850px"><p class="eyebrow">A few helpful answers</p><h2>Giving, with clarity.</h2><div class="faq"><details><summary>Can I support a specific project?</summary><p>Select a project above. Where a verified project-specific checkout is configured, you will be directed there. Otherwise, prepare an inquiry so the team can confirm current needs and available options.</p></details><details><summary>Can I make a monthly gift?</summary><p>Choose Monthly above. Recurring gifts are managed by the donation provider after you confirm the amount and terms. If no verified monthly checkout is available, you can ask the team about it by email.</p></details><details><summary>What happens after I donate?</summary><p>A connected payment provider handles payment confirmation and receipts. This site does not mark a payment successful or issue a receipt on its own. For receipt questions, contact the foundation.</p></details><details><summary>Can I give by check or another method?</summary><p>Please <a href="/contact/?topic=Giving">confirm current instructions directly with AEF</a> before mailing a check or transferring funds. Historical mailing details are not presented here as current instructions.</p></details></div></section>
+  <script>
+    import { emailDraft, givingDestination } from '../lib/integrations.mjs';
+    const root = document.querySelector<HTMLElement>('#giving-card')!;
+    const form = document.querySelector<HTMLFormElement>('#giving-form')!;
+    const project = document.querySelector<HTMLSelectElement>('#giving-project')!;
+    const submit = document.querySelector<HTMLButtonElement>('#giving-submit')!;
+    const projectUrls = JSON.parse(root.dataset.projectUrls || '[]') as { slug: string; oneTimeUrl: string; monthlyUrl: string }[];
+    const query = new URLSearchParams(location.search);
+    if ([...project.options].some(option => option.value === query.get('project'))) project.value = query.get('project') || '';
+    if (query.get('frequency') === 'monthly') (form.querySelector('[value="monthly"]') as HTMLInputElement).checked = true;
+    function state() {
+      const monthly = new FormData(form).get('frequency') === 'monthly';
+      const url = givingDestination({ project: project.value, monthly, oneTimeUrl: root.dataset.oneTime, monthlyUrl: root.dataset.monthly, projectUrls });
+      return { monthly, url, label: project.selectedOptions[0].textContent || 'Abundant Earth Foundation' };
+    }
+    function update() {
+      const { monthly, url, label } = state();
+      document.querySelector('#giving-heading')!.textContent = monthly ? 'Help the work keep growing.' : 'Support community-led change.';
+      document.querySelector('#giving-description')!.textContent = `${monthly ? 'Monthly' : 'One-time'} giving · ${label}`;
+      document.querySelector('#giving-availability')!.textContent = url ? 'You’ll choose your amount and confirm the fund, frequency, and all payment details with the donation provider. No payment is made by clicking this button.' : 'A verified checkout for this selection is not connected. Prepare an email to ask about current giving options. No payment details are collected here.';
+      submit.textContent = url ? 'Continue to secure checkout →' : 'Prepare a giving inquiry →';
+      document.querySelector<HTMLElement>('#giving-result')!.hidden = true;
+    }
+    form.addEventListener('change', update);
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const { monthly, url, label } = state();
+      if (url) { location.assign(url); return; }
+      const body = `Hello Abundant Earth Foundation,\n\nI would like to learn about ${monthly ? 'monthly' : 'one-time'} giving.\n\nArea of interest: ${label}\n\nPlease let me know the current needs and verified ways to donate.\n\nThank you.`;
+      document.querySelector<HTMLTextAreaElement>('#giving-preview')!.value = body;
+      document.querySelector<HTMLAnchorElement>('#giving-email')!.href = emailDraft(root.dataset.email!, `Giving inquiry: ${label}`, body);
+      const result = document.querySelector<HTMLElement>('#giving-result')!;
+      result.hidden = false;
+      result.focus();
+    });
+    submit.disabled = false;
+    update();
+  </script>
+</Layout>

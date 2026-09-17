@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Photo from '../../components/Photo.astro';
+import Icon from '../../components/Icon.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { projects } from '../../lib/content';
+export function getStaticPaths() { return projects.map(project => ({ params: { slug: project.slug }, props: { project } })); }
+const { project } = Astro.props;
+const related = projects.filter(p => p.slug !== project.slug).sort((a, b) => Number(b.theme === project.theme) - Number(a.theme === project.theme)).slice(0, 3);
+---
+<Layout title={project.name} description={project.summary} image={`/images/${project.image}-1600.webp`}>
+  <section class="container project-hero"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/projects/">Our projects</a> <span aria-hidden="true"> / </span> {project.name}</nav><div class="project-hero-grid"><div><p class="eyebrow">{project.theme}</p><h1>{project.name}</h1><p class="intro-description">{project.summary}</p><p class="location" style="margin-top: 24px"><Icon name="pin" />{project.location}</p><span class="pill">{project.status}</span></div><figure><Photo name={project.image} alt={project.imageAlt} eager /><figcaption>{project.imageCaption}</figcaption></figure></div></section>
+  <section class="section container article-grid"><div class="prose"><h2>The place. The possibility.</h2><p>{project.challenge}</p><h2>Local leadership in action.</h2><p>{project.approach}</p><h2>How AEF has helped.</h2><p>{project.support}</p><h2>From the project record.</h2><ul class="outcome-list">{project.outcomes.map(outcome => <li><Icon name="check" />{outcome}</li>)}</ul><p class="source-note">{project.outcomeNote}</p><p class="source-note"><a href={project.source}>Read the archived source <span aria-hidden="true">↗</span></a></p></div><aside class="aside-card"><p class="eyebrow">Meet the roots</p><h2>{project.shortName}</h2><dl><dt>Led by</dt><dd>{project.leader}</dd><dt>Focus</dt><dd>{project.theme}</dd><dt>Reporting status</dt><dd>{project.status}</dd></dl><hr /><p>Interested in supporting this work? Ask about current needs and the available ways to give.</p><a class="button" href={`/donate/?project=${project.slug}`}>Explore giving <Icon name="heart" /></a>{project.externalUrl && <a class="text-link" href={project.externalUrl}>Visit the project website <Icon name="external" /></a>}<a class="text-link" href={`/contact/?topic=Project%20update&project=${project.slug}`}>Share a project update <Icon /></a></aside></section>
+  <section class="section projects-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">The connections keep growing</p><h2>More work to discover.</h2></div><a class="text-link" href="/projects/">All projects <Icon /></a></div><div class="project-grid">{related.map(p => <ProjectCard project={p} />)}</div></div></section><Newsletter />
+</Layout>
