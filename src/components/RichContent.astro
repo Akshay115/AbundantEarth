@@ -1,5 +1,7 @@
 ---
 import { renderLegacyHtml } from '../lib/legacy';
-interface Props { html: string; }
+import { reserveImageSpace } from '../lib/image-dimensions';
+interface Props { html: string; variant?: 'default' | 'team'; }
+const html = await reserveImageSpace(renderLegacyHtml(Astro.props.html, Astro.props.variant));
 ---
-<div class="prose legacy-content" set:html={renderLegacyHtml(Astro.props.html)} />
+<div class="prose legacy-content" set:html={html} />

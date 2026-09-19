@@ -29,6 +29,14 @@ A researched, responsive redesign of **abundantearthfoundation.org**, built arou
 - A [Pages CMS](https://pagescms.org/) configuration for Git-based editing of projects, stories, foundation settings, impact, and public provider links.
 - GitHub Actions checks and downloadable static-build artifacts.
 
+### Layout review
+
+Reviewed all **176 content pages at 320, 390, 768, 1024, and 1440px** (880 page/width checks), with visual review of the shared page layouts. The revised build has no detected page overflow, clipped text, or undersized columns in that review.
+
+Corrections include a narrow-phone header that fits the screen, wrapping long titles, a scrollable landscape menu, tablet-friendly reading/form columns, consistent card alignment and image frames, readable source paragraphs and galleries, paired team portraits/biographies, and declared image dimensions to reserve space before images load. Historical donor acknowledgments are retained in a collapsible source appendix.
+
+The source datasets, existing stories, and donation destinations are unchanged by the layout pass. See [layout review and verification](docs/LAYOUTS.md).
+
 ## Run locally
 
 Use **Node.js 24 LTS** for development, tests, and deployment. Astro’s minimum runtime is 22.12; the test suite uses Node 24’s native TypeScript support.
@@ -69,13 +77,23 @@ The verification suite includes:
 |---|---|
 | Astro/TypeScript | Templates, browser scripts, and test configuration |
 | Build verification | All generated local links and anchors, project/story references, required metadata, provider URL validation, and legacy redirect targets |
-| 182 browser checks | Desktop/mobile page rendering and WCAG A/AA scans, imported resource/project pages, map filters and zoom, site search, article exclusions, form validation, navigation, 404s, images, and no-JavaScript alternatives |
+| 190 browser checks | Desktop/mobile page rendering and WCAG A/AA scans, imported resource/project pages, map filters and zoom, site search, article exclusions, form validation, navigation, 404s, images, no-JavaScript alternatives, narrow-phone/landscape layouts, and tablet stacking |
 | 6 provider-handoff checks | One-time and monthly checkout navigation, newsletter handoff, and protection against routing a project-specific gift to the general fund |
-| 8 unit checks | Provider routing, unsafe URL rejection, email encoding, HTML sanitization, migration inventory, blog exclusions, and preservation of project descriptions embedded in old GiveWP containers |
+| 12 unit checks | Provider routing, unsafe URL rejection, email encoding, HTML sanitization, migration inventory, blog exclusions, source-content preservation, portrait/biography grouping, and image dimensions |
 
 `test:providers` builds with reserved `example.org` fixture URLs, intercepts those navigations locally, and **restores the normal build in a `finally` block**. It does not contact a payment provider or submit personal information. Do not run it concurrently with another build.
 
 Automated accessibility results are not a claim of formal accessibility certification. Manually review keyboard use, zoom, screen-reader experience, and any connected external providers before launch.
+
+To repeat the all-page layout scan against a running built preview:
+
+```bash
+npm run build
+npm run preview
+npm run review:layouts
+```
+
+The review writes screenshots and a JSON report to `/tmp/opencode/aef-layout-review`, not into the repository. Override the server URL or output directory with `LAYOUT_BASE_URL` and `LAYOUT_REVIEW_DIR`.
 
 ## Content editing
 

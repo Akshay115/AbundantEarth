@@ -45,6 +45,7 @@ const structuredData = { '@context': 'https://schema.org', '@type': 'NGO', name:
         <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><Icon name="menu" /><span>Menu</span></button>
         <nav id="main-nav" class="main-nav" aria-label="Main navigation">
           {nav.map(([label, url]) => <a href={url} aria-current={isActive(url) ? 'page' : undefined}>{label}</a>)}
+          <a class="nav-search" href="/search/">Search the site</a>
           <a href="/donate/" class="button button-small">Donate <Icon name="heart" /></a>
         </nav>
       </div>
