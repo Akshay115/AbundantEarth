@@ -1,0 +1,5 @@
+---
+import partners from '../data/legacy-partners.json';
+const names = ['Permayouth', 'Lush Spring Prize 2021', 'Ethos Foundation', 'Empowered by Light', 'REAP Climate Center', 'Aranya Solutions', 'Reflorestar Portugal', '7Vortex', 'Rex Foundation', 'LEAF', 'Planet Positive'];
+---
+<section class="section container partner-section"><p class="eyebrow">Part of a wider community</p><h2>Connections that help good things grow.</h2><div class="partner-grid">{partners.map((partner, index) => <figure><img src={partner.image} alt={names[index] || partner.alt} width="220" height="140" loading="lazy" /><figcaption>{names[index]}</figcaption></figure>)}</div><p class="source-note">Partner marks recovered from the original AEF website. They represent the published relationship history and do not imply a newly confirmed endorsement.</p></section>

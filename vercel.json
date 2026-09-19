@@ -6,35 +6,497 @@
   "outputDirectory": "dist",
   "trailingSlash": true,
   "redirects": [
-    { "source": "/about-us/", "destination": "/about/", "statusCode": 301 },
-    { "source": "/our-team/", "destination": "/about/#team", "statusCode": 301 },
-    { "source": "/projects-we-support/", "destination": "/projects/", "statusCode": 301 },
-    { "source": "/agroforestry-regeneration-communities/", "destination": "/projects/agroforestry-regeneration-communities/", "statusCode": 301 },
-    { "source": "/tge/", "destination": "/projects/towards-green-environment/", "statusCode": 301 },
-    { "source": "/bod/", "destination": "/projects/beyond-organic-design/", "statusCode": 301 },
-    { "source": "/how-to-apply-for-funding/", "destination": "/get-support/", "statusCode": 301 },
-    { "source": "/abundant-earth-foundation-newsletter-signup/", "destination": "/newsletter/", "statusCode": 301 },
-    { "source": "/aef-privacy-policy/", "destination": "/privacy/", "statusCode": 301 },
-    { "source": "/category/recent-news/", "destination": "/stories/", "statusCode": 301 },
-    { "source": "/podcasts/", "destination": "/resources/", "statusCode": 301 },
-    { "source": "/donations/donate-to-agroforestry-regeneration-communities/", "destination": "/donate/?project=agroforestry-regeneration-communities", "statusCode": 301 },
-    { "source": "/donations/donate-to-regenerative-holistic-resource-center/", "destination": "/donate/?project=regenerative-holistic-resource-center", "statusCode": 301 },
-    { "source": "/donations/donate-to-towards-green-environment/", "destination": "/donate/?project=towards-green-environment", "statusCode": 301 },
-    { "source": "/donations/donate-to-beyond-organic-design/", "destination": "/donate/?project=beyond-organic-design", "statusCode": 301 }
+    {
+      "source": "/about-us/",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/our-team/",
+      "destination": "/about/#team",
+      "statusCode": 301
+    },
+    {
+      "source": "/projects-we-support/",
+      "destination": "/projects/",
+      "statusCode": 301
+    },
+    {
+      "source": "/agroforestry-regeneration-communities/",
+      "destination": "/projects/agroforestry-regeneration-communities/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tge/",
+      "destination": "/projects/towards-green-environment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/bod/",
+      "destination": "/projects/beyond-organic-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/how-to-apply-for-funding/",
+      "destination": "/get-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/abundant-earth-foundation-newsletter-signup/",
+      "destination": "/newsletter/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aef-privacy-policy/",
+      "destination": "/privacy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/recent-news/",
+      "destination": "/stories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/podcasts/",
+      "destination": "/resources/podcasts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-agroforestry-regeneration-communities/",
+      "destination": "/donate/?project=agroforestry-regeneration-communities",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-regenerative-holistic-resource-center/",
+      "destination": "/donate/?project=regenerative-holistic-resource-center",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-towards-green-environment/",
+      "destination": "/donate/?project=towards-green-environment",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-beyond-organic-design/",
+      "destination": "/donate/?project=beyond-organic-design",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-love-letters-project/",
+      "destination": "/projects/love-letters/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ecoversities/",
+      "destination": "/projects/ecoversities/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ancientcacao/",
+      "destination": "/projects/ancient-cacao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/clean-energy-with-comics/",
+      "destination": "/projects/clean-cooking-with-comics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate-copy/",
+      "destination": "/donate/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hookele-industries/",
+      "destination": "/projects/hookele-industries/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hookele-industries-a-free-market-solution-to-overfishing/",
+      "destination": "/projects/hookele-industries/",
+      "statusCode": 301
+    },
+    {
+      "source": "/osa/",
+      "destination": "/projects/regenerosa-collective/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rooted-connections/",
+      "destination": "/projects/rooted-connections/",
+      "statusCode": 301
+    },
+    {
+      "source": "/love-letters/",
+      "destination": "/projects/love-letters/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sunrise-studios-collective/",
+      "destination": "/projects/sunrise-studios-collective/",
+      "statusCode": 301
+    },
+    {
+      "source": "/maptest/",
+      "destination": "/history/#map",
+      "statusCode": 301
+    },
+    {
+      "source": "/build-your-own-internship/",
+      "destination": "/internships/build-your-own/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about-us/project-administration-internship/",
+      "destination": "/internships/project-administration/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about-us/intern/",
+      "destination": "/internships/",
+      "statusCode": 301
+    },
+    {
+      "source": "/permaculture-movement-fundraiser/",
+      "destination": "/campaigns/permaculture-movement/",
+      "statusCode": 301
+    },
+    {
+      "source": "/together-we-can-campaign/",
+      "destination": "/campaigns/together-we-can/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate-to-tiny-gardens/",
+      "destination": "/donate/?project=tiny-gardens",
+      "statusCode": 301
+    },
+    {
+      "source": "/individual-impact-report/",
+      "destination": "/report-impact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mothers-of-the-amazon/",
+      "destination": "/projects/mothers-of-the-amazon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tiny-gardens/",
+      "destination": "/projects/tiny-gardens/",
+      "statusCode": 301
+    },
+    {
+      "source": "/deeper-roots/",
+      "destination": "/projects/deeper-roots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donor-dashboard-3/",
+      "destination": "/donor-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donor-dashboard-2/",
+      "destination": "/donor-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donor-dashboard/",
+      "destination": "/donor-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/architectsofthefuture/",
+      "destination": "/resources/architects-of-the-future/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate-to-the-reap-center/",
+      "destination": "/projects/reap-climate-center/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate-to-seaworthycollective/",
+      "destination": "/projects/seaworthy-collective/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate-to-refarmers/",
+      "destination": "/donate/?project=refarmers",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate-to-regenerative-holistic-resource-center/",
+      "destination": "/donate/?project=regenerative-holistic-resource-center",
+      "statusCode": 301
+    },
+    {
+      "source": "/fall-2019-newsletter/",
+      "destination": "/resources/newsletters/fall-2019/",
+      "statusCode": 301
+    },
+    {
+      "source": "/videos/",
+      "destination": "/resources/videos/",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-response-podcast/",
+      "destination": "/resources/the-response/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ipc-video/",
+      "destination": "/resources/seeds-of-change/",
+      "statusCode": 301
+    },
+    {
+      "source": "/first-newsletter-november-2018/",
+      "destination": "/resources/newsletters/november-2018/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yipp/",
+      "destination": "/youth/",
+      "statusCode": 301
+    },
+    {
+      "source": "/recurring-donations-2/",
+      "destination": "/donor-support/#recurring",
+      "statusCode": 301
+    },
+    {
+      "source": "/donation-history/",
+      "destination": "/donor-support/#receipts",
+      "statusCode": 301
+    },
+    {
+      "source": "/donation-failed/",
+      "destination": "/donor-support/#payment-status",
+      "statusCode": 301
+    },
+    {
+      "source": "/donation-success-page/",
+      "destination": "/donor-support/#payment-status",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-of-service/",
+      "destination": "/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/clients/",
+      "destination": "/donor-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/recurring-donations/",
+      "destination": "/donor-support/#recurring",
+      "statusCode": 301
+    },
+    {
+      "source": "/how-to-contribute/",
+      "destination": "/how-we-help/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/",
+      "destination": "/stories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/nonprofit/",
+      "destination": "/donate/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/weaver/",
+      "destination": "/campaigns/legacy-weaver/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/ger-conference/",
+      "destination": "/campaigns/legacy-ger-conference/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/carbon-tithe/",
+      "destination": "/campaigns/legacy-carbon-tithe/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/planet-humboldt/",
+      "destination": "/campaigns/legacy-planet-humboldt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/planet-humboldt-sponsorship/",
+      "destination": "/campaigns/legacy-planet-humboldt-sponsorship/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donation-for-classes-or-workshops/",
+      "destination": "/campaigns/legacy-donation-for-classes-or-workshops/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/svr-homabay-kenya/",
+      "destination": "/campaigns/legacy-svr-homabay-kenya/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-refarmers/",
+      "destination": "/donate/?project=refarmers",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-deeper-roots/",
+      "destination": "/donate/?project=deeper-roots",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-tiny-gardens/",
+      "destination": "/donate/?project=tiny-gardens",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-youth-in-permaculture-prize/",
+      "destination": "/donate/?project=youth-in-permaculture",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-mothers-of-the-amazon/",
+      "destination": "/donate/?project=mothers-of-the-amazon",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/together-we-can-campaign/",
+      "destination": "/campaigns/legacy-together-we-can-campaign/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/help-grow-the-permaculture-movement/",
+      "destination": "/campaigns/legacy-help-grow-the-permaculture-movement/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/rwa/",
+      "destination": "/campaigns/legacy-rwa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/vimi-media-lab/",
+      "destination": "/campaigns/legacy-vimi-media-lab/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/hope-studio/",
+      "destination": "/campaigns/legacy-hope-studio/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/pine-ridge/",
+      "destination": "/campaigns/legacy-pine-ridge/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/kikuyu-town-arts-center/",
+      "destination": "/campaigns/legacy-kikuyu-town-arts-center/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-sunrise-studio-collective/",
+      "destination": "/donate/?project=sunrise-studios-collective",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/tge/",
+      "destination": "/donate/?project=towards-green-environment",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-the-maui-bioremediation-coalition/",
+      "destination": "/campaigns/legacy-donate-to-the-maui-bioremediation-coalition/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/donate-to-live-aloha-animals/",
+      "destination": "/campaigns/legacy-donate-to-live-aloha-animals/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/support-climate-education/",
+      "destination": "/donate/?project=beyond-organic-design",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/loveletters/",
+      "destination": "/donate/?project=love-letters",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/rootedconnections/",
+      "destination": "/donate/?project=rooted-connections",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/osa/",
+      "destination": "/donate/?project=regenerosa-collective",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/ancientcacao/",
+      "destination": "/donate/?project=ancient-cacao",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/givewp-donation-form/",
+      "destination": "/donate/",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/hookele-industries-a-free-market-solution-to-overfishing/",
+      "destination": "/donate/?project=hookele-industries",
+      "statusCode": 301
+    },
+    {
+      "source": "/donations/powering-clean-energy-with-comics-a-biogas-education-pilot/",
+      "destination": "/donate/?project=clean-cooking-with-comics",
+      "statusCode": 301
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/_astro/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }

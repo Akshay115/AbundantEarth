@@ -1,0 +1,57 @@
+.legacy-content { max-width: 100%; padding-top: 28px; overflow-wrap: anywhere; }
+.legacy-content img { width: auto; max-width: 100%; max-height: 580px; object-fit: contain; height: auto; border-radius: 5px; margin: 24px auto; }
+.legacy-content figure { margin-block: 26px; }
+.legacy-content h2 { font-size: 1.9rem; }
+.legacy-content h3 { font-size: 1.45rem; }
+.legacy-content p { margin-block: 16px; }
+.legacy-content em { color: inherit; }
+.legacy-content figure:has(a[href^="https://sdgs.un.org/"]) { display: inline-block; margin: 5px; }
+.legacy-content a[href^="https://sdgs.un.org/"] { display: inline-block; font-size: .74rem; padding: 6px 10px; border: 1px solid var(--line); border-radius: 4px; }
+.legacy-content > img { max-width: min(100%, 650px); }
+#team .legacy-content { max-width: 850px; }
+#team .legacy-content img { max-height: 230px; margin-left: 0; }
+.utility-links { display: flex; align-items: center; gap: 25px; }
+.history-invitation { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+.history-invitation p:not(.eyebrow) { color: var(--muted); margin-top: 20px; max-width: 600px; }
+.history-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-block: 30px; }
+.history-card { border: 1px solid var(--line); border-radius: 7px; padding: 25px; background: #fffdf7; min-width: 0; }
+.history-card h2 { font-size: 1.55rem; margin-bottom: 16px; overflow-wrap: anywhere; }
+.history-card h2 a { text-decoration: none; }
+.history-card h2 a:hover { text-decoration: underline; }
+.history-card p:not(.eyebrow) { color: var(--muted); font-size: .8rem; }
+.history-card .eyebrow { font-size: .59rem; }
+.history-map { background: var(--sand); padding: 28px; margin-bottom: 40px; border-radius: 8px; }
+.history-map h2 { font-size: 2.25rem; }
+.history-map > p:not(.eyebrow) { color: var(--muted); margin-top: 16px; font-size: .85rem; }
+.map-scroll { width: 100%; overflow: auto; border: 1px solid var(--line); border-radius: 5px; margin-top: 15px; max-height: 520px; background: #f7f8ef; }
+.map-canvas { width: calc(100% * var(--map-scale)); aspect-ratio: 2; position: relative; }
+.map-canvas > img { width: 100%; height: 100%; }
+.map-marker { display: block; position: absolute; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; border: 2px solid #fff; background: var(--green); box-shadow: 0 1px 4px #254b3d66; }
+.map-marker:hover, .map-marker:focus-visible { z-index: 2; background: #995420; }
+.map-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 22px; }
+.map-controls button { border: 1px solid var(--green); background: var(--cream); color: var(--green); border-radius: 4px; min-width: 44px; padding: 8px 12px; }
+.map-controls span { font-size: .72rem; color: var(--muted); }
+.image-placeholder { display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center; height: 100%; min-height: 265px; background: #e1e7d4; color: var(--green); border-radius: inherit; padding: 30px; }
+.image-placeholder .icon { width: 60px; height: 60px; }
+.image-placeholder span { font-family: var(--serif); text-align: center; }
+.partner-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px; margin-block: 35px; align-items: center; }
+.partner-grid img { width: 100%; height: 100px; object-fit: contain; }
+.partner-grid figcaption { font-size: .67rem; text-align: center; }
+.partner-section h2 { max-width: 700px; }
+.project-card h3 { overflow-wrap: anywhere; }
+.sources-list { overflow-wrap: anywhere; }
+@media(max-width:1000px) {
+  .history-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .partner-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .history-invitation { flex-direction: column; align-items: flex-start; }
+}
+@media(max-width:700px) {
+  .history-grid { grid-template-columns: 1fr; }
+  .partner-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .history-map { padding: 20px; }
+  .map-marker { width: 12px; height: 12px; border-width: 1px; }
+  .topbar .utility-links { display: none; }
+  .legacy-content h2 { font-size: 1.7rem; }
+  .history-card h2 { font-size: 1.55rem; }
+  .footer-bottom > div { flex-wrap: wrap; }
+}

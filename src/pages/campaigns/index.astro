@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Icon from '../../components/Icon.astro';
+import { legacyPages, projects } from '../../lib/content';
+const campaigns = legacyPages.filter(p => p.path.startsWith('/campaigns/'));
+---
+<Layout title="Campaign directory"><PageIntro eyebrow="Giving, with a record" title="Ways people have helped change grow." description="Explore the foundation’s project giving routes and historical campaigns. Confirm current needs with the team before supporting an older initiative." /><section class="section container"><h2>Project giving</h2><div class="feature-grid">{projects.map(p => <article class="feature-card"><h3>{p.name}</h3><p>{p.location}</p><a class="text-link" href={`/donate/?project=${p.slug}`}>Explore giving options <Icon /></a></article>)}</div><h2 style="margin-top:70px">Historical campaigns</h2><div class="feature-grid">{campaigns.map(c => <article class="feature-card"><p class="eyebrow">Source record</p><h3>{c.title}</h3><a class="text-link" href={c.path}>Read the campaign record <Icon /></a></article>)}</div></section></Layout>

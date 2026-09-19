@@ -1,6 +1,14 @@
 {
-  "donationUrl": "",
-  "monthlyDonationUrl": "",
+  "donationUrl": "https://secure.givelively.org/donate/abundant-earth-foundation",
+  "monthlyDonationUrl": "https://secure.givelively.org/donate/abundant-earth-foundation",
   "newsletterUrl": "",
-  "projectDonationUrls": []
+  "projectDonationUrls": [
+    { "slug": "agroforestry-regeneration-communities", "oneTimeUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/agroforestry-regeneration-communities", "monthlyUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/agroforestry-regeneration-communities" },
+    { "slug": "towards-green-environment", "oneTimeUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/towards-green-environment", "monthlyUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/towards-green-environment" },
+    { "slug": "beyond-organic-design", "oneTimeUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/donate-to-beyond-organic-design", "monthlyUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/donate-to-beyond-organic-design" },
+    { "slug": "love-letters", "oneTimeUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/the-love-letters-project", "monthlyUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/the-love-letters-project" },
+    { "slug": "ancient-cacao", "oneTimeUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/ancient-cacao", "monthlyUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/ancient-cacao" },
+    { "slug": "regenerosa-collective", "oneTimeUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/regenerosa-collective", "monthlyUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/regenerosa-collective" },
+    { "slug": "clean-cooking-with-comics", "oneTimeUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/donate-to-powering-clean-cooking-with-comics", "monthlyUrl": "https://secure.givelively.org/donate/abundant-earth-foundation/donate-to-powering-clean-cooking-with-comics" }
+  ]
 }

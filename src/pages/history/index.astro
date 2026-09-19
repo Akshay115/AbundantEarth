@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import HistoryMap from '../../components/HistoryMap.astro';
+import Icon from '../../components/Icon.astro';
+import { history } from '../../lib/content';
+const years = [...new Set(history.map(h => h.year).filter(Boolean))].sort().reverse();
+---
+<Layout title="Project & prize history"><PageIntro eyebrow="The wider network" title="Many hands. Years of possibility." description="Explore the project, training, and youth-prize records recovered from the foundation’s original map. These historical records complement the main project directory." />
+  <div class="container section"><HistoryMap />
+    <div class="filter-panel" data-history-filters hidden><div class="filter-fields"><label>Search project history<input type="search" id="history-search" placeholder="Name, place, organization, or year" /></label><label>Record type<select id="history-type"><option value="">All records</option><option value="youth">Youth prize recipients</option><option value="project">Projects & training</option></select></label><label>Year<select id="history-year"><option value="">All years</option>{years.map(year => <option>{year}</option>)}</select></label></div><div class="filter-bottom"><p role="status" id="history-count">{history.length} records</p><button type="button" id="history-reset">Clear filters</button></div></div>
+    <div class="history-grid">{history.map(record => <article class="history-card" data-history-record data-slug={record.slug} data-youth={String(record.youth)} data-year={record.year} data-search={`${record.title} ${record.location} ${record.summary}`.toLowerCase()}><p class="eyebrow">{record.youth ? 'Youth prize recipient' : 'Project record'}{record.year && ` · ${record.year}`}</p><h2><a href={`/history/${record.slug}/`}>{record.title}</a></h2><p>{record.location}</p><a class="text-link" href={`/history/${record.slug}/`}>Read the record <Icon /></a></article>)}</div>
+    <p class="notice" id="history-empty" hidden>No matching records. Try another name, place, or year, or clear your filters.</p>
+    <p class="section-note">Some source entries contain only a name and “more information coming soon.” These are preserved as limited records. They are not counted as new projects or completed outcomes.</p><div class="button-row"><a class="button button-outline" href="/history/grants/">Year-by-year project lists <Icon /></a><a class="text-link" href="/youth/">Youth prize program <Icon /></a></div>
+  </div>
+  <script>
+    const search = document.querySelector<HTMLInputElement>('#history-search')!;
+    const type = document.querySelector<HTMLSelectElement>('#history-type')!;
+    const year = document.querySelector<HTMLSelectElement>('#history-year')!;
+    const params = new URLSearchParams(location.search);
+    search.value = params.get('q') || ''; type.value = params.get('type') || ''; year.value = params.get('year') || '';
+    const records = [...document.querySelectorAll<HTMLElement>('[data-history-record]')];
+    function update() {
+      const visible = new Set<string>();
+      records.forEach(record => {
+        record.hidden = !((record.dataset.search || '').includes(search.value.trim().toLowerCase()) && (!year.value || year.value === record.dataset.year) && (!type.value || (type.value === 'youth') === (record.dataset.youth === 'true')));
+        if (!record.hidden) visible.add(record.dataset.slug!);
+      });
+      document.querySelectorAll<HTMLElement>('[data-map-slug]').forEach(marker => marker.hidden = !visible.has(marker.dataset.mapSlug!));
+      const mapped = document.querySelectorAll('[data-map-slug]:not([hidden])').length;
+      document.querySelector<HTMLElement>('.map-scroll')!.hidden = mapped === 0;
+      document.querySelector<HTMLElement>('[data-map-controls]')!.hidden = mapped === 0;
+      document.querySelector<HTMLElement>('#map-unavailable')!.hidden = mapped > 0;
+      document.querySelector('#history-count')!.textContent = `${visible.size} records found`;
+      document.querySelector<HTMLElement>('#history-empty')!.hidden = visible.size > 0;
+      const query = new URLSearchParams(); if (search.value) query.set('q', search.value); if (type.value) query.set('type', type.value); if (year.value) query.set('year', year.value);
+      window.history.replaceState(null, '', `${location.pathname}${query.size ? '?' + query : ''}${location.hash}`);
+    }
+    search.addEventListener('input', update); type.addEventListener('change', update); year.addEventListener('change', update);
+    document.querySelector('#history-reset')?.addEventListener('click', () => { search.value = ''; type.value = ''; year.value = ''; update(); search.focus(); });
+    document.querySelector<HTMLElement>('[data-history-filters]')!.hidden = false; update();
+  </script>
+</Layout>

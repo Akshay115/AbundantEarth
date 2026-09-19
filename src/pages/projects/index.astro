@@ -17,7 +17,7 @@ const themes = [...new Set(projects.map(p => p.theme))];
     <noscript><p class="notice">All projects are listed below. Use your browser’s Find feature to search by name or location.</p></noscript>
     <div class="project-grid">{projects.map(project => <ProjectCard project={project} />)}</div>
     <div class="empty-state" id="empty-state" hidden><h2>No projects found.</h2><p>Try another search, focus area, or country.</p><button type="button" class="button button-outline" id="empty-reset">Show all projects</button></div>
-    <p class="section-note">This is a curated directory, not the full historical grant ledger. Profiles reflect the cited archives. Current activity and funding needs have not yet been reverified.</p>
+    <p class="section-note">These profiles combine the original curated directory with recovered project pages. For the wider grant and recipient record, <a href="/history/">explore project history</a> or <a href="/history/#map">browse the map</a>. Source-page dates and campaign context are provided on each profile.</p>
     <aside class="map-panel"><p class="eyebrow">Explore by place</p><h2>Local roots, around the world.</h2><p>Start with a country to discover the projects connected to it.</p><div class="country-links">{countries.map(country => <a href={`/projects/?country=${encodeURIComponent(country)}#directory`}>{country}</a>)}</div></aside>
   </section>
   <Newsletter />

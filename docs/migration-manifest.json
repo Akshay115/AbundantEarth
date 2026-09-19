@@ -1,0 +1,1489 @@
+{
+  "reviewed": "2026-09-18",
+  "source": "https://abundantearthfoundation.org",
+  "excludedBlogUrls": [
+    "https://abundantearthfoundation.org/chance-for-justice-and-healing/",
+    "https://abundantearthfoundation.org/hope-for-rural-communities-in-sub-sahara/",
+    "https://abundantearthfoundation.org/advancing-permaculture-philanthropy-on-the-permaculture-podcast/",
+    "https://abundantearthfoundation.org/growing-community-food-forests/",
+    "https://abundantearthfoundation.org/announcing-the-2021-tiny-garden-contest-winner/",
+    "https://abundantearthfoundation.org/serenaded-by-mother-nature/",
+    "https://abundantearthfoundation.org/starting-small-with-tiny-gardens/",
+    "https://abundantearthfoundation.org/celebrating-world-rainforest-day/",
+    "https://abundantearthfoundation.org/support-refarmers-regenerative-farming-projects/",
+    "https://abundantearthfoundation.org/seaworthy-collective-a-community-of-sea-change-makers/",
+    "https://abundantearthfoundation.org/regenerative-holistic-resource-center-in-kenya/",
+    "https://abundantearthfoundation.org/land-access-resources-for-women/",
+    "https://abundantearthfoundation.org/celebrating-the-life-of-bees/",
+    "https://abundantearthfoundation.org/celebrating-international-permaculture-day/",
+    "https://abundantearthfoundation.org/how-to-fund-earth-repair/",
+    "https://abundantearthfoundation.org/celebrating-international-compost-awareness-week/",
+    "https://abundantearthfoundation.org/celebrate-earth-day-with-a-tiny-garden-contest/",
+    "https://abundantearthfoundation.org/april-perma-youth-americas-festival/",
+    "https://abundantearthfoundation.org/categorize-sdgs-by-groups-for-more-impact/",
+    "https://abundantearthfoundation.org/celebrating-the-lives-of-international-female-environmentalists/",
+    "https://abundantearthfoundation.org/contour-lines-is-permaculture-magazine-prize-2020-main-winner/",
+    "https://abundantearthfoundation.org/earth-hour-guided-meditation-on-march-27/",
+    "https://abundantearthfoundation.org/announcing-the-2020-youth-in-permaculture-prize-winners/",
+    "https://abundantearthfoundation.org/permayouth-ambassador-crew-debut-new-song-entitled-water/",
+    "https://abundantearthfoundation.org/corenewal-protects-waterways-from-toxic-wildfire-runoff/",
+    "https://abundantearthfoundation.org/aef-says-goodbye-to-larry-korn-a-dear-friend-mentor-and-bright-spirit-in-the-world/",
+    "https://abundantearthfoundation.org/all-the-worlds-problems-can-be-solved-in-a-garden/",
+    "https://abundantearthfoundation.org/field-notes-lessons-from-tamera-and-water/"
+  ],
+  "pages": [
+    {
+      "source": "/the-love-letters-project/",
+      "decision": "migrated",
+      "target": "/projects/love-letters/"
+    },
+    {
+      "source": "/ecoversities/",
+      "decision": "migrated",
+      "target": "/projects/ecoversities/"
+    },
+    {
+      "source": "/ancientcacao/",
+      "decision": "migrated",
+      "target": "/projects/ancient-cacao/"
+    },
+    {
+      "source": "/clean-energy-with-comics/",
+      "decision": "migrated",
+      "target": "/projects/clean-cooking-with-comics/"
+    },
+    {
+      "source": "/donate-copy/",
+      "decision": "consolidated",
+      "target": "/donate/"
+    },
+    {
+      "source": "/hookele-industries/",
+      "decision": "migrated",
+      "target": "/projects/hookele-industries/"
+    },
+    {
+      "source": "/hookele-industries-a-free-market-solution-to-overfishing/",
+      "decision": "consolidated",
+      "target": "/projects/hookele-industries/"
+    },
+    {
+      "source": "/osa/",
+      "decision": "migrated",
+      "target": "/projects/regenerosa-collective/"
+    },
+    {
+      "source": "/rooted-connections/",
+      "decision": "migrated",
+      "target": "/projects/rooted-connections/"
+    },
+    {
+      "source": "/love-letters/",
+      "decision": "consolidated",
+      "target": "/projects/love-letters/"
+    },
+    {
+      "source": "/bod/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/projects/beyond-organic-design/"
+    },
+    {
+      "source": "/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/"
+    },
+    {
+      "source": "/tge/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/projects/towards-green-environment/"
+    },
+    {
+      "source": "/financials/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/financials/"
+    },
+    {
+      "source": "/sunrise-studios-collective/",
+      "decision": "migrated",
+      "target": "/projects/sunrise-studios-collective/"
+    },
+    {
+      "source": "/maptest/",
+      "decision": "consolidated",
+      "target": "/history/#map"
+    },
+    {
+      "source": "/build-your-own-internship/",
+      "decision": "migrated",
+      "target": "/internships/build-your-own/"
+    },
+    {
+      "source": "/about-us/project-administration-internship/",
+      "decision": "migrated",
+      "target": "/internships/project-administration/"
+    },
+    {
+      "source": "/about-us/intern/",
+      "decision": "migrated",
+      "target": "/internships/"
+    },
+    {
+      "source": "/permaculture-movement-fundraiser/",
+      "decision": "migrated",
+      "target": "/campaigns/permaculture-movement/"
+    },
+    {
+      "source": "/together-we-can-campaign/",
+      "decision": "migrated",
+      "target": "/campaigns/together-we-can/"
+    },
+    {
+      "source": "/agroforestry-regeneration-communities/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/projects/agroforestry-regeneration-communities/"
+    },
+    {
+      "source": "/abundant-earth-foundation-newsletter-signup/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/newsletter/"
+    },
+    {
+      "source": "/donate-to-tiny-gardens/",
+      "decision": "consolidated",
+      "target": "/donate/?project=tiny-gardens"
+    },
+    {
+      "source": "/individual-impact-report/",
+      "decision": "consolidated",
+      "target": "/report-impact/"
+    },
+    {
+      "source": "/donate/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/donate/"
+    },
+    {
+      "source": "/our-team/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/about/#team"
+    },
+    {
+      "source": "/mothers-of-the-amazon/",
+      "decision": "migrated",
+      "target": "/projects/mothers-of-the-amazon/"
+    },
+    {
+      "source": "/tiny-gardens/",
+      "decision": "migrated",
+      "target": "/projects/tiny-gardens/"
+    },
+    {
+      "source": "/deeper-roots/",
+      "decision": "migrated",
+      "target": "/projects/deeper-roots/"
+    },
+    {
+      "source": "/donor-dashboard-3/",
+      "decision": "consolidated",
+      "target": "/donor-support/"
+    },
+    {
+      "source": "/donor-dashboard-2/",
+      "decision": "consolidated",
+      "target": "/donor-support/"
+    },
+    {
+      "source": "/donor-dashboard/",
+      "decision": "consolidated",
+      "target": "/donor-support/"
+    },
+    {
+      "source": "/architectsofthefuture/",
+      "decision": "migrated",
+      "target": "/resources/architects-of-the-future/"
+    },
+    {
+      "source": "/donate-to-the-reap-center/",
+      "decision": "migrated",
+      "target": "/projects/reap-climate-center/"
+    },
+    {
+      "source": "/projects-we-support/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/projects/"
+    },
+    {
+      "source": "/volunteer/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/volunteer/"
+    },
+    {
+      "source": "/donate-to-seaworthycollective/",
+      "decision": "migrated",
+      "target": "/projects/seaworthy-collective/"
+    },
+    {
+      "source": "/articles/bee-the-change/",
+      "decision": "excluded-editorial-content",
+      "target": null
+    },
+    {
+      "source": "/donate-to-refarmers/",
+      "decision": "consolidated",
+      "target": "/donate/?project=refarmers"
+    },
+    {
+      "source": "/donate-to-regenerative-holistic-resource-center/",
+      "decision": "consolidated",
+      "target": "/donate/?project=regenerative-holistic-resource-center"
+    },
+    {
+      "source": "/articles/resilience/",
+      "decision": "excluded-editorial-content",
+      "target": null
+    },
+    {
+      "source": "/articles/biomimicry/",
+      "decision": "excluded-editorial-content",
+      "target": null
+    },
+    {
+      "source": "/articles/",
+      "decision": "excluded-editorial-content",
+      "target": null
+    },
+    {
+      "source": "/larrykorn/",
+      "decision": "excluded-editorial-content",
+      "target": null
+    },
+    {
+      "source": "/fall-2019-newsletter/",
+      "decision": "migrated",
+      "target": "/resources/newsletters/fall-2019/"
+    },
+    {
+      "source": "/how-to-apply-for-funding/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/get-support/"
+    },
+    {
+      "source": "/videos/",
+      "decision": "migrated",
+      "target": "/resources/videos/"
+    },
+    {
+      "source": "/podcasts/",
+      "decision": "migrated",
+      "target": "/resources/podcasts/"
+    },
+    {
+      "source": "/the-response-podcast/",
+      "decision": "migrated",
+      "target": "/resources/the-response/"
+    },
+    {
+      "source": "/ipc-video/",
+      "decision": "migrated",
+      "target": "/resources/seeds-of-change/"
+    },
+    {
+      "source": "/first-newsletter-november-2018/",
+      "decision": "migrated",
+      "target": "/resources/newsletters/november-2018/"
+    },
+    {
+      "source": "/yipp/",
+      "decision": "migrated",
+      "target": "/youth/"
+    },
+    {
+      "source": "/recurring-donations-2/",
+      "decision": "consolidated",
+      "target": "/donor-support/#recurring"
+    },
+    {
+      "source": "/donation-history/",
+      "decision": "consolidated",
+      "target": "/donor-support/#receipts"
+    },
+    {
+      "source": "/donation-failed/",
+      "decision": "consolidated",
+      "target": "/donor-support/#payment-status"
+    },
+    {
+      "source": "/donation-success-page/",
+      "decision": "consolidated",
+      "target": "/donor-support/#payment-status"
+    },
+    {
+      "source": "/terms-of-service/",
+      "decision": "migrated",
+      "target": "/terms/"
+    },
+    {
+      "source": "/aef-privacy-policy/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/privacy/"
+    },
+    {
+      "source": "/clients/",
+      "decision": "consolidated",
+      "target": "/donor-support/"
+    },
+    {
+      "source": "/recurring-donations/",
+      "decision": "consolidated",
+      "target": "/donor-support/#recurring"
+    },
+    {
+      "source": "/how-to-contribute/",
+      "decision": "migrated",
+      "target": "/how-we-help/"
+    },
+    {
+      "source": "/about-us/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/about/"
+    },
+    {
+      "source": "/contact/",
+      "decision": "existing-page-updated-or-retained",
+      "target": "/contact/"
+    },
+    {
+      "source": "/blog/",
+      "decision": "consolidated",
+      "target": "/stories/"
+    }
+  ],
+  "campaigns": [
+    {
+      "source": "/donations/nonprofit/",
+      "decision": "consolidated",
+      "target": "/donate/"
+    },
+    {
+      "source": "/donations/weaver/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-weaver/"
+    },
+    {
+      "source": "/donations/ger-conference/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-ger-conference/"
+    },
+    {
+      "source": "/donations/carbon-tithe/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-carbon-tithe/"
+    },
+    {
+      "source": "/donations/planet-humboldt/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-planet-humboldt/"
+    },
+    {
+      "source": "/donations/planet-humboldt-sponsorship/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-planet-humboldt-sponsorship/"
+    },
+    {
+      "source": "/donations/donation-for-classes-or-workshops/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-donation-for-classes-or-workshops/"
+    },
+    {
+      "source": "/donations/donate-to-regenerative-holistic-resource-center/",
+      "decision": "consolidated",
+      "target": "/donate/?project=regenerative-holistic-resource-center"
+    },
+    {
+      "source": "/donations/svr-homabay-kenya/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-svr-homabay-kenya/"
+    },
+    {
+      "source": "/donations/donate-to-refarmers/",
+      "decision": "consolidated",
+      "target": "/donate/?project=refarmers"
+    },
+    {
+      "source": "/donations/donate-to-deeper-roots/",
+      "decision": "consolidated",
+      "target": "/donate/?project=deeper-roots"
+    },
+    {
+      "source": "/donations/donate-to-tiny-gardens/",
+      "decision": "consolidated",
+      "target": "/donate/?project=tiny-gardens"
+    },
+    {
+      "source": "/donations/donate-to-youth-in-permaculture-prize/",
+      "decision": "consolidated",
+      "target": "/donate/?project=youth-in-permaculture"
+    },
+    {
+      "source": "/donations/donate-to-mothers-of-the-amazon/",
+      "decision": "consolidated",
+      "target": "/donate/?project=mothers-of-the-amazon"
+    },
+    {
+      "source": "/donations/donate-to-agroforestry-regeneration-communities/",
+      "decision": "consolidated",
+      "target": "/donate/?project=agroforestry-regeneration-communities"
+    },
+    {
+      "source": "/donations/together-we-can-campaign/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-together-we-can-campaign/"
+    },
+    {
+      "source": "/donations/help-grow-the-permaculture-movement/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-help-grow-the-permaculture-movement/"
+    },
+    {
+      "source": "/donations/rwa/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-rwa/"
+    },
+    {
+      "source": "/donations/vimi-media-lab/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-vimi-media-lab/"
+    },
+    {
+      "source": "/donations/hope-studio/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-hope-studio/"
+    },
+    {
+      "source": "/donations/pine-ridge/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-pine-ridge/"
+    },
+    {
+      "source": "/donations/kikuyu-town-arts-center/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-kikuyu-town-arts-center/"
+    },
+    {
+      "source": "/donations/donate-to-sunrise-studio-collective/",
+      "decision": "consolidated",
+      "target": "/donate/?project=sunrise-studios-collective"
+    },
+    {
+      "source": "/donations/tge/",
+      "decision": "consolidated",
+      "target": "/donate/?project=towards-green-environment"
+    },
+    {
+      "source": "/donations/donate-to-the-maui-bioremediation-coalition/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-donate-to-the-maui-bioremediation-coalition/"
+    },
+    {
+      "source": "/donations/donate-to-live-aloha-animals/",
+      "decision": "archived-campaign",
+      "target": "/campaigns/legacy-donate-to-live-aloha-animals/"
+    },
+    {
+      "source": "/donations/support-climate-education/",
+      "decision": "consolidated",
+      "target": "/donate/?project=beyond-organic-design"
+    },
+    {
+      "source": "/donations/loveletters/",
+      "decision": "consolidated",
+      "target": "/donate/?project=love-letters"
+    },
+    {
+      "source": "/donations/rootedconnections/",
+      "decision": "consolidated",
+      "target": "/donate/?project=rooted-connections"
+    },
+    {
+      "source": "/donations/osa/",
+      "decision": "consolidated",
+      "target": "/donate/?project=regenerosa-collective"
+    },
+    {
+      "source": "/donations/ancientcacao/",
+      "decision": "consolidated",
+      "target": "/donate/?project=ancient-cacao"
+    },
+    {
+      "source": "/donations/givewp-donation-form/",
+      "decision": "consolidated",
+      "target": "/donate/"
+    },
+    {
+      "source": "/donations/hookele-industries-a-free-market-solution-to-overfishing/",
+      "decision": "consolidated",
+      "target": "/donate/?project=hookele-industries"
+    },
+    {
+      "source": "/donations/powering-clean-energy-with-comics-a-biogas-education-pilot/",
+      "decision": "consolidated",
+      "target": "/donate/?project=clean-cooking-with-comics"
+    }
+  ],
+  "media": [
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/06/OrcaWhale-Sanctuary-781x1024.jpeg",
+      "local": "/images/legacy/b599cbbbc486d473.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/IMG_2175-200x300.jpg",
+      "local": "/images/legacy/d729b5fcc140c90d.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/IMG_3031-300x200.jpg",
+      "local": "/images/legacy/f86ebfbe7091f4fd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/IMG_2757-300x200.jpg",
+      "local": "/images/legacy/5ddd8a83476015b5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/IMG_2028-200x300.jpg",
+      "local": "/images/legacy/c7c6cb8f28d92524.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/Ancient-cacao1-300x300.jpg",
+      "local": "/images/legacy/2cf6ef2338f5add6.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/Ancient-cacao2-300x300.jpg",
+      "local": "/images/legacy/5c8eb473855c87a5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/Ancient-cacao3-300x300.jpg",
+      "local": "/images/legacy/9177f5fc0a26beb6.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/Ancient-cacao5-300x300.jpg",
+      "local": "/images/legacy/7f21ac0a23104d77.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/Ancient-cacao4-300x300.jpg",
+      "local": "/images/legacy/f0f0b91af41fa89a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/06/Comic-Biogas.jpg",
+      "local": "/images/legacy/fffa08d77f2f76ba.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/07/Ancient-cacao6-300x300.jpg",
+      "local": "/images/legacy/a8dab62222ff1583.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/05/20250621_165202-1024x768.webp",
+      "local": "/images/legacy/4014102541aa0cba.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/05/IMG_20240418_182441_631-scaled.jpg",
+      "local": "/images/legacy/21fdac6c07a4e651.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/09/logoReg-768x308.png",
+      "local": "/images/legacy/c1d5dcba8294af8e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/09/regen1-1-1024x768.jpeg",
+      "local": "/images/legacy/c35d70bef83e9d7c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/09/IMG_3711-1024x768.jpeg",
+      "local": "/images/legacy/a08d9ede537d6367.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/09/Img_3712-768x1024.jpeg",
+      "local": "/images/legacy/66454721915a8303.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/07/page-1-768x384.png",
+      "local": "/images/legacy/37aadc728b8e5c02.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/07/ziyera-community-story-768x334.png",
+      "local": "/images/legacy/373821675f6cd4f7.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/07/our-fundraiser-768x211.png",
+      "local": "/images/legacy/8a7c9babc10a97e0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/07/rooted-connection-poem-768x329.png",
+      "local": "/images/legacy/5d2df715c739f409.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/07/course-modules-768x333.png",
+      "local": "/images/legacy/f1bcd000c7a2beb8.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/07/me-768x459.png",
+      "local": "/images/legacy/7b67c757671ec004.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/02/BOD_1-768x553.png",
+      "local": "/images/legacy/0c384d46fe1edcfc.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/02/Logo-LongBlue-scaled-e1781743936274-800x450.png",
+      "local": "/images/legacy/8aa923a4218c7e0d.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/05/Beyond-Organic-logo-1-1024x366.webp",
+      "local": "/images/legacy/2e3581ab5866b03e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/2-ro73y6f04jm5uxdh77qvhq690381fi05tyqjztzqhc.png",
+      "local": "/images/legacy/11879f882d70aca2.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/1-ro73y2nnd7h0khixt64d7r4emjqkkpl8hg4m2q5b68.png",
+      "local": "/images/legacy/ad73bbdbf7fc59a2.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/4-ro73yczvgdv6473x4sl9h6ih5sblxdqa6vaycrpz9s.png",
+      "local": "/images/legacy/437784ab4d66a4d9.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/5-ro73ygr87q0bemygiu7rr5kbjbt2s657jdww9vkekw.png",
+      "local": "/images/legacy/4614d086bc78211e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/6-ro73yjkqs846dgud2dfngmupbhf6f9gejrvcppg828.png",
+      "local": "/images/legacy/b40edf4991bb1991.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/8-ro73yr3gawegycjfugoo0kye2ke44ua98t38jx52og.png",
+      "local": "/images/legacy/02b0940357e2569e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/3-ro73ya6cvvrb5d80l9ddrp83dmpiaaf36hchwxu5sg.png",
+      "local": "/images/legacy/0092eb7e384fb6ab.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/7-ro73ync3jk9bnwowgf25qlwjp0wna1vbwahamtandc.png",
+      "local": "/images/legacy/6bcfa78d3d0238be.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/Partner-Logos-ro73yxobmqnh7m9vs1j201am89homq0dlpnmwuvbgw.png",
+      "local": "/images/legacy/02b295ba73bdb6c2.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/Partner-Logos-2-ro73z496ykwhgw0bpmdfzhmudyl94lqhym819slk9c.png",
+      "local": "/images/legacy/7087e80498c48201.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/Partner-Logos-3-ro73zau2af5hq5qrn77tyxz2jnotmhgmbisfmqbt1s.png",
+      "local": "/images/legacy/5b689b3feda0a8f9.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/Refarmers-6.jpeg",
+      "local": "/images/legacy/34271b2fdfc7978c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Untitled-design-22-300x169.png",
+      "local": "/images/legacy/3ebb7f5f212da2d3.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/IMG_0192-scaled-768x512.jpg",
+      "local": "/images/legacy/e087f70f3a4e76dc.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/Screenshot-2022-12-06-at-10.16.32-AM-768x442.png",
+      "local": "/images/legacy/301f1ce825f23368.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/IMG_0203-scaled-768x512.jpg",
+      "local": "/images/legacy/c6551d0765a658f5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/12/Towards-Green-Environment-Donation-2.png",
+      "local": "/images/legacy/020b2ebb280ef538.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/16-e1689286392619-768x491.png",
+      "local": "/images/legacy/e82168ef557ea002.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Screenshot-2023-07-11-at-3.43.01-PM-150x150.png",
+      "local": "/images/legacy/49f399ee73ed0b5a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/Screen-Shot-2022-11-17-at-6.43.27-PM-1024x690.png",
+      "local": "/images/legacy/fdd28c0ce40ae326.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Untitled-design-21-e1689095704404-300x184.png",
+      "local": "/images/legacy/bee4c58bf409f055.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/SRS-Regular-Donation-Page-Images-768x614.png",
+      "local": "/images/legacy/6f00aa62c14ff23c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SRS-2-e1686761192188.png",
+      "local": "/images/legacy/60ba7c41d308bfbe.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/Vimi-girls-by-tree-1024x683.jpeg",
+      "local": "/images/legacy/a5baeadb4ee9a290.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screen-Shot-2022-11-17-at-2.43.27-PM-scaled-1024x593.jpg",
+      "local": "/images/legacy/49d8d09a379b6d4d.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/03/desk-arrangement-with-picture-laptop-1-scaled-1536x657.jpg",
+      "local": "/images/legacy/a383fb31841f9ca3.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/09/help_Grow_IG-01-1024x1024.png",
+      "local": "/images/legacy/4828c89e1a02d9d5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/09/09_01_help_Grow_F-03-1024x538.png",
+      "local": "/images/legacy/e15b91e71f2f1c99.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/09/09_13_help_Grow_F-03-1024x538.png",
+      "local": "/images/legacy/f8d777b7163a0cf3.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/09/09_13_help_Grow-01-1024x1024.png",
+      "local": "/images/legacy/e966994660e27acc.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/08/Repair_Planet-01.jpg",
+      "local": "/images/legacy/149cb4f0ab2acf26.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2020/05/Patrik-%C2%A9Mucia-of-Mono-Imagen-Photography-1024x681.jpg",
+      "local": "/images/legacy/d93fcf5686c02717.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/07/ARC_Square_2000-300x215.png",
+      "local": "/images/legacy/3d0672039fa6d06c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/ARC.png",
+      "local": "/images/legacy/6f343a8a563870f1.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/ARC-2.png",
+      "local": "/images/legacy/4ad87273f8388ed0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/09/Roland_Newsletter-01-1024x586.png",
+      "local": "/images/legacy/eacc610dc4a2a7fc.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/09/Roland_Newsletter-03-1024x586.png",
+      "local": "/images/legacy/cb982e6929f011b1.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/03/Online-meeting-150x150.png",
+      "local": "/images/legacy/471f2ff667ddbe9e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/03/Harvesting-basil-150x150.png",
+      "local": "/images/legacy/2caa03cfe330c3fc.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/03/Fundraiser-poster-150x150.png",
+      "local": "/images/legacy/7f5d2eba52c674f7.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/03/Design-process-150x150.png",
+      "local": "/images/legacy/bb54b3a66db86a3f.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/03/Tracing-baseball-map-150x150.png",
+      "local": "/images/legacy/94089ec9de9dbc36.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/Screenshot-2022-12-06-at-10.16.32-AM-150x150.png",
+      "local": "/images/legacy/3a67b133bfd088dd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/12/Screenshot-2022-12-06-at-10.18.00-AM-150x150.png",
+      "local": "/images/legacy/91d5794f9a4e52f1.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/4-1-150x150.png",
+      "local": "/images/legacy/35dac5b94d110540.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/7-1-150x150.png",
+      "local": "/images/legacy/3961667066bc870e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/Towards-Green-Environment-150x150.png",
+      "local": "/images/legacy/f3dfecf2daf7566f.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/8-150x150.png",
+      "local": "/images/legacy/2643967d1f041088.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/9-150x150.png",
+      "local": "/images/legacy/5a80490ebdcb8f1c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/16-e1689286392619-150x150.png",
+      "local": "/images/legacy/72214d983dd0b04b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/18-150x150.png",
+      "local": "/images/legacy/8b83decd99be231e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/01/22-150x150.png",
+      "local": "/images/legacy/fbf89940ac56ecdd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/elementor/thumbs/OrcaTemp-qpb4i8jaf1zr3hc0sfiy87pa0glc96822p3nwjurww.png",
+      "local": "/images/legacy/85390fb5af88ac99.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/09/montegrande-Jaen--1024x768.jpg",
+      "local": "/images/legacy/75e32d743206ed4a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/2-150x150.jpeg",
+      "local": "/images/legacy/8b3e73a52b705376.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/8-Luwayo-Malawi-02-2022-5-scaled-1-150x150.jpeg",
+      "local": "/images/legacy/7212e46f1eeca943.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/17-Permaculture-Paradise_Course.jpg-150x150.webp",
+      "local": "/images/legacy/3dbe0b37fb44e347.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/Roland-homepg-scaled.jpg-150x150.webp",
+      "local": "/images/legacy/7235840d2be57a07.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/26-267988778_4389099161212524_7002963472026256953_n.jpg-150x150.webp",
+      "local": "/images/legacy/eecd9817f4467aff.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/14-DSC02254-scaled-1-150x150.jpeg",
+      "local": "/images/legacy/d32d402da99dca12.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/11-Luwayo-Malawi-02-2022-2-scaled-1-150x150.jpeg",
+      "local": "/images/legacy/de27bae719d4e5ed.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/Hannah-HAE-Headshot.jpg",
+      "local": "/images/legacy/84454fbd312df87f.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/Best-pic-from-Jolene-1024x819.jpg",
+      "local": "/images/legacy/814c04ff0d53d840.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/AEF_New_Logo-01-e1620308532699-300x83.png",
+      "local": "/images/legacy/cb6fb2eb37196ec4.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/08/Mothers-of-the-Amazon-Web-Banner.jpg",
+      "local": "/images/legacy/24fdccd00b7cb9b0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/08/Tiny-Gardens-Web-Banner.jpg",
+      "local": "/images/legacy/cc10833f12c8c733.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-4-150x150.jpg",
+      "local": "/images/legacy/07e7ffd52023020c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/04/large-Sack-Vegetable-Garden-150x150.jpg",
+      "local": "/images/legacy/e390c76c688a3127.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-2-150x150.jpg",
+      "local": "/images/legacy/a2bea4e89dd30821.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-3-150x150.jpeg",
+      "local": "/images/legacy/db8dae4cbbc0dbb8.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-6-150x150.jpg",
+      "local": "/images/legacy/b18fd060f58dd2a5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-10-150x150.jpeg",
+      "local": "/images/legacy/1251bb27bd9300d2.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-12-150x150.jpg",
+      "local": "/images/legacy/f8f002ab9d840799.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-8-150x150.jpg",
+      "local": "/images/legacy/a93f148cdb385d7b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-13-150x150.jpeg",
+      "local": "/images/legacy/48955b21b20e9282.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-14-150x150.jpeg",
+      "local": "/images/legacy/9411bff1dc661aed.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2018/07/teaching-at-orphanages-and-refugee-camps-e1532773291777-768x1024.webp",
+      "local": "/images/legacy/a83d8b1eadad517a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2020/05/Patrik-%C2%A9Mucia-of-Mono-Imagen-Photography.jpg",
+      "local": "/images/legacy/63441544eca0d182.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/03/AofF_7_vortex_for_website_-1-1024x494.png",
+      "local": "/images/legacy/123b7e4b78b89fe7.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/03/AoF_lofo_sc_sh.png",
+      "local": "/images/legacy/08bcc6e95ee7587f.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/3-Luwayo-Malawi-02-2022-11-scaled-12-150x150.jpeg",
+      "local": "/images/legacy/8337b601825bad06.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/3-Luwayo-Malawi-02-2022-11-scaled-1-150x150.jpeg",
+      "local": "/images/legacy/5f89392e2f0b2b4a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/7-Luwayo-Malawi-02-2022-6-scaled-1-150x150.jpeg",
+      "local": "/images/legacy/fc2e567ee7838e3b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/16-DSC01931-scaled-1-150x150.jpeg",
+      "local": "/images/legacy/a49f1b426406009e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/2.jpg-150x150.webp",
+      "local": "/images/legacy/57f5bab1b78d6881.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/patrick-homepg-scaled.jpg-150x150.webp",
+      "local": "/images/legacy/5c2c14943da98116.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2022/11/Permaculture-Paradise_Seedlings.jpg-150x150.webp",
+      "local": "/images/legacy/118a089364f9f6ad.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/02/Beyond-Organic-Design-e1708584024127-768x249.png",
+      "local": "/images/legacy/ae07abc8c298ffc2.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/02/BOD_pic1.png",
+      "local": "/images/legacy/bc26790968994ffd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/05/Tracing-baseball-map-150x150.png",
+      "local": "/images/legacy/8c6d34e2ea686ab6.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/05/Online-meeting-150x150.png",
+      "local": "/images/legacy/9f444abb90d6d14f.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/05/Harvesting-basil-150x150.png",
+      "local": "/images/legacy/78a453e1a8dcf6fd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/05/Fundraiser-poster-150x150.png",
+      "local": "/images/legacy/d1ff1f97a6005b0b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/05/Design-process-150x150.png",
+      "local": "/images/legacy/cd0a348dac8e3c9f.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/TGE-logo-300x125.png",
+      "local": "/images/legacy/6bc945a054518df9.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/IMG_0110-Copy-scaled-150x150.jpg",
+      "local": "/images/legacy/4d3ea64d72f4de65.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/IMG_0192-scaled-150x150.jpg",
+      "local": "/images/legacy/6fe06881fec16864.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/IMG_0203-scaled-150x150.jpg",
+      "local": "/images/legacy/74c4334558ffc245.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/IMG_0163-scaled-150x150.jpg",
+      "local": "/images/legacy/410f0a602deff195.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/ARC-300x225.png",
+      "local": "/images/legacy/cc875a0878438589.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Permaculture-Podcast-1-300x225.png",
+      "local": "/images/legacy/9ecb706d1c64eea0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Permaculture-Podcast-2-1.png",
+      "local": "/images/legacy/f28b38175efb5d16.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/YIPP-300x225.png",
+      "local": "/images/legacy/28ab259fa2da7a61.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/YIPP-2.png",
+      "local": "/images/legacy/338f74726e12b7da.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SAKINA-1-300x225.png",
+      "local": "/images/legacy/a7f2eea7f1fe4615.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SAKINA-2-1.png",
+      "local": "/images/legacy/e732bdab705f9710.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SheGenerative-1-300x225.png",
+      "local": "/images/legacy/508224c4b5fb1453.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SheGenerative-2-1.png",
+      "local": "/images/legacy/25eb86acdd78f594.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/One-More-Salary-1-300x225.png",
+      "local": "/images/legacy/e49c906c129b1442.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/One-More-Salary-2-1.png",
+      "local": "/images/legacy/25bf2f37c2b3aacd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/OTEPIC-300x225.png",
+      "local": "/images/legacy/659455e71b01d2a1.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/OTEPIC-2.png",
+      "local": "/images/legacy/3f91c698e36e74d7.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Bemeriki-2-300x225.png",
+      "local": "/images/legacy/c0be0eed34fd7fb9.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Bemeriki.png",
+      "local": "/images/legacy/dc6ee7fa41ca83db.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Roland-1-300x225.png",
+      "local": "/images/legacy/ef233f47fc4514f5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Roland-2-1.png",
+      "local": "/images/legacy/06be00db3887a42b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Willis-300x225.png",
+      "local": "/images/legacy/22c193572b0535bd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Willis-2.png",
+      "local": "/images/legacy/559bd4877d7d3db1.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SRS-2-e1686761192188-300x224.png",
+      "local": "/images/legacy/106926d9de2d80da.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SRS.png",
+      "local": "/images/legacy/796cc979d842d0af.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Ulemu-300x225.png",
+      "local": "/images/legacy/9cfa20f39e3a3dcd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Ulemu-2.png",
+      "local": "/images/legacy/78ed261337475007.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/East-Africa-Permaculture-Convergence-300x225.png",
+      "local": "/images/legacy/532939e767c618aa.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/East-Africa-Permaculture-Convergence-2.png",
+      "local": "/images/legacy/0d2e3568910b7c8b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/The-response-2-300x225.png",
+      "local": "/images/legacy/5d4046ad4f88e1a8.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/The-response.png",
+      "local": "/images/legacy/8346c0c419967ec0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2026/06/Comic-Biogas-300x296.jpg",
+      "local": "/images/legacy/bdb0da14b7b472b9.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/09/Agroforestry_Regeneration_W-05-1024x586.png",
+      "local": "/images/legacy/9ff07c1a18fc33c6.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/04/Nonprofit-sponsorship-graphic-768x531.png",
+      "local": "/images/legacy/d6d46fd564d24f73.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/04/O4SC-Update-768x768.png",
+      "local": "/images/legacy/4e0ed303b9dbb25b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/08/Seaworthy-Collective-We-Banner.jpg",
+      "local": "/images/legacy/7d7acac890d36e82.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Lulu-Vierkoetter-2022.jpg",
+      "local": "/images/legacy/b27d3ebcb92a1f39.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Nakafeero-Brenda-2022-e1689294923628.jpg",
+      "local": "/images/legacy/5d84e0d97b8e8834.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/02/Youth-In-Permaculture-Prize-2020-1.jpg",
+      "local": "/images/legacy/e60347f3558e2659.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/02/Youth-In-Permaculture-Prize-2020-2.jpg",
+      "local": "/images/legacy/1c9cf43b18ffc63b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/02/Youth-In-Permaculture-Prize-2020-3.jpg",
+      "local": "/images/legacy/afc3f4c08a57183b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/02/Youth-In-Permaculture-Prize-2020-4.jpg",
+      "local": "/images/legacy/3d115ed943d3f892.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2019/11/YIPP_2019_PM-p1-724x1024.jpg",
+      "local": "/images/legacy/78db05865ab14b66.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2019/11/YIPP_2019_PM-p3-724x1024.jpg",
+      "local": "/images/legacy/0fcea80b787efe0e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2019/11/YIPP_2019_PM-p2-724x1024.jpg",
+      "local": "/images/legacy/dda6d81d938cf5ea.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2018/10/YiPP-p.1-724x1024.jpg",
+      "local": "/images/legacy/3bfb6ee01dc15d37.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2018/10/YiPP-p.-2--724x1024.jpg",
+      "local": "/images/legacy/025e365dca55b74a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2018/10/YiPP-p.3-724x1024.jpg",
+      "local": "/images/legacy/cd4d2359702212c0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/03/%C2%A9OlaTomLakere.jpg",
+      "local": "/images/legacy/7bd93a80440b9f03.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-4.jpg",
+      "local": "/images/legacy/05781520e02ab083.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/05/tiny-garden-10-768x1024.jpeg",
+      "local": "/images/legacy/a7ad89c018588be8.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/Nakafeero-Brenda-2022.jpg",
+      "local": "/images/legacy/8f8916ca9a1d3fb4.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/Eddie-Brown-2022.jpg",
+      "local": "/images/legacy/3b1693c30a5dcfe3.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/05/Lulu-Vierkoetter-2022.jpg",
+      "local": "/images/legacy/12b7b3ce084dc56e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2019/11/Maria_pic_for_PM-e1572992123986-300x300.jpg",
+      "local": "/images/legacy/323854e052306bba.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Qassim-and-school-teachers-for-PM-1-300x169.jpg",
+      "local": "/images/legacy/426c6680aba8744b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Bracken-team-Nicola-and-Jonathan-YIPP-2019-1-300x258.jpg",
+      "local": "/images/legacy/22f3491a2b5a5965.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Millicent-1-300x169.jpg",
+      "local": "/images/legacy/c14a378a2d305ee0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/MSPC-club-members-Enala-and-Seliya-in-Permaculture-Garden-at-Mkondezi-Primary-School-1-225x300.jpg",
+      "local": "/images/legacy/22d25b717adfa178.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/SCOPE-YIPP-2021-300x223.jpg",
+      "local": "/images/legacy/d4a28c2973def50e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/E4CAP-Team-Garden-Spring-300x200.jpg",
+      "local": "/images/legacy/10ba2f0612fd2f1e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Sachakuyrana-defenders-of-the-forest-group-listening-to-advice-from-the-elder-Jose-Yumbo-the-Sachawaysa-community-founder.-1-300x169.jpg",
+      "local": "/images/legacy/968524bcd172e9e5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Carla-YIPP-2022-300x198.jpg",
+      "local": "/images/legacy/fc00c417a04f4761.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Chayton-YIPP-2022-300x200.jpg",
+      "local": "/images/legacy/9e4bd470288b69e6.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Agustin-YIPP-2022-214x300.jpeg",
+      "local": "/images/legacy/15bbfe5e46953c80.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Kuki-YIPP-2022-300x300.jpeg",
+      "local": "/images/legacy/dc726493e1646764.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Ola-YIPP-2020--300x225.webp",
+      "local": "/images/legacy/e5983e4e359db61f.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Maia-Raymond-YIPP-2022-.jpeg",
+      "local": "/images/legacy/bb6aa1d92a85bffd.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Eugenio-De-Jesus-Mendonca-Timor-Leste-YIPP-2022-300x154.jpg",
+      "local": "/images/legacy/106374104aba31ec.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/ERC-Logo_Colour_RGB_72ppi-01.png-1024x442.webp",
+      "local": "/images/legacy/18c6022a84085189.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SOL_Logo_final_beige-300x300.png",
+      "local": "/images/legacy/fda418698990d8b5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/VUFFFnobackBest.png-300x159.webp",
+      "local": "/images/legacy/4d390c12839cf520.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screenshot-2023-06-02-at-1.34.45-PM-1024x768.jpg",
+      "local": "/images/legacy/0c6c5950b9c86677.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2020/06/80098900_567360134080861_6055013278646534144_o-720x960-1.jpg",
+      "local": "/images/legacy/651b5cab7f4ead2a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/b65c21_c8177342191f485d872b77bb5b72a5d1mv2_d_2560_3588_s_4_2.jpg.webp",
+      "local": "/images/legacy/00a4a2c3c222f950.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/logo-hi-optimized3-1.png",
+      "local": "/images/legacy/b81303642728160a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screenshot-2023-06-04-at-4.54.17-PM.png",
+      "local": "/images/legacy/904c9a39532f349b.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SW_edited.jpg.webp",
+      "local": "/images/legacy/81fbad78be3db89c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screenshot-2023-06-04-at-5.02.12-PM-1024x619.png",
+      "local": "/images/legacy/e9e90f583a4571f0.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screenshot-2023-06-04-at-5.14.28-PM.png",
+      "local": "/images/legacy/a3afc04795769ef6.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/20180529_162354-2-1024x576.jpg",
+      "local": "/images/legacy/43234395f00db4a4.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/IMG_4945-2-1024x768.jpg",
+      "local": "/images/legacy/c00fdfde06f07282.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/311241784_478212824344095_1993563060936472362_n.jpg",
+      "local": "/images/legacy/afc9cf45d7b49b10.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/One-More-Salary-1.png",
+      "local": "/images/legacy/126518073c3002b5.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/european-permaculture-convergence-2018.jpg-1024x640.webp",
+      "local": "/images/legacy/e9e3716cafd68efe.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/WhatsApp-Image-2022-11-15-at-10.41.53-1-1024x768.jpeg",
+      "local": "/images/legacy/a862069e659f4f14.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Roland-1.png",
+      "local": "/images/legacy/dd704aa9f03ba353.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/SAKINA-1.png",
+      "local": "/images/legacy/a3d960dc54f1b080.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/OTEPIC.png",
+      "local": "/images/legacy/7eeea0c5aa78ffca.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Odienya-Permaculture-300x225.png",
+      "local": "/images/legacy/24af8070c1a5f1ef.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Bemeriki-2.png",
+      "local": "/images/legacy/c64f0651b4fbeed7.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/The-response-2.png",
+      "local": "/images/legacy/a865ddfddf9bef5e.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Permaculture-Podcast-1.png",
+      "local": "/images/legacy/71eb005d9cf31c28.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Willis.png",
+      "local": "/images/legacy/a593d80ecb8cda7d.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Hero-Women-Rising-4-1024x768.jpg",
+      "local": "/images/legacy/5afc5be55fd6ad9c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Studio-in-a-Suitcase.jpeg",
+      "local": "/images/legacy/d95eb26d45b39a16.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Dt8cesPXgAAIH2L-1024x427.png",
+      "local": "/images/legacy/0185b942946d8286.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screen-Shot-2022-11-17-at-2.43.27-PM-1024x593.jpg",
+      "local": "/images/legacy/55da48c72a47947c.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Huni-Kuin-youth-with-guitars-cropped-1024x636.jpg",
+      "local": "/images/legacy/3e21e41225e3bfde.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screenshot-2023-06-20-at-4.27.20-PM.jpg",
+      "local": "/images/legacy/a6cab2b3abf44872.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Screenshot-2023-06-22-at-11.40.14-AM.png",
+      "local": "/images/legacy/fef9b788c297804a.webp"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2021/07/cropped-AEF_WEB_LOGO.png",
+      "local": "/images/legacy/1e8f4f44eeb7e321.webp"
+    }
+  ],
+  "failures": [
+    {
+      "source": "https://abundantearthfoundation.org/donations/ger-conference/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/donations/planet-humboldt/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/donations/planet-humboldt-sponsorship/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/donations/svr-homabay-kenya/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/donations/help-grow-the-permaculture-movement/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/donations/vimi-media-lab/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/donations/pine-ridge/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/donations/donate-to-the-maui-bioremediation-coalition/",
+      "kind": "campaign-body",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2024/09/regen4-scaled.jpeg",
+      "reason": "HTTP 404"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/Felipes-pic-225x300.jpg",
+      "reason": "HTTP 403"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/07/John-Lago-Gonzales-YIPP-2018--300x225.jpg",
+      "reason": "HTTP 403"
+    },
+    {
+      "source": "https://abundantearthfoundation.org/wp-content/uploads/2023/06/Ulemu.png",
+      "reason": "The operation was aborted due to timeout"
+    }
+  ]
+}

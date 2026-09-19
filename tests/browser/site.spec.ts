@@ -1,9 +1,12 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import projects from '../../src/data/projects.json' with { type: 'json' };
+import baseProjects from '../../src/data/projects.json' with { type: 'json' };
+import importedProjects from '../../src/data/legacy-projects.json' with { type: 'json' };
+import legacyPages from '../../src/data/legacy-pages.json' with { type: 'json' };
 import stories from '../../src/data/stories.json' with { type: 'json' };
 
-const pages = ['/', '/about/', '/projects/', '/impact/', '/get-involved/', '/get-support/', '/volunteer/', '/partnerships/', '/fiscal-sponsorship/', '/donate/', '/newsletter/', '/contact/', '/financials/', '/stories/', '/resources/', '/privacy/', '/accessibility/', '/sources/', ...projects.map(p => `/projects/${p.slug}/`), ...stories.map(s => `/stories/${s.slug}/`)];
+const projects = [...baseProjects, ...importedProjects];
+const pages = ['/', '/about/', '/projects/', '/impact/', '/get-involved/', '/get-support/', '/volunteer/', '/partnerships/', '/fiscal-sponsorship/', '/donate/', '/newsletter/', '/contact/', '/financials/', '/stories/', '/resources/', '/privacy/', '/accessibility/', '/sources/', '/history/', '/history/grants/', '/history/brenda-nakafeero-kitgum-uganda-2022/', '/search/', '/campaigns/', '/report-impact/', '/donor-support/', '/resources/newsletters/', ...legacyPages.map(p => p.path), ...projects.map(p => `/projects/${p.slug}/`), ...stories.map(s => `/stories/${s.slug}/`)];
 
 for (const path of pages) {
   test(`page, layout, and accessibility: ${path}`, async ({ page }) => {
@@ -22,7 +25,7 @@ for (const path of pages) {
 
 test('project filters combine, persist in URL, and have an accessible empty state', async ({ page }) => {
   await page.goto('/projects/?country=Kenya');
-  await expect(page.locator('[data-project-card]:visible')).toHaveCount(4);
+  await expect(page.locator('[data-project-card]:visible')).toHaveCount(projects.filter(p => p.countries.includes('Kenya')).length);
   await page.getByLabel('Focus area').selectOption('Community resilience');
   await expect(page.locator('[data-project-card]:visible')).toHaveCount(1);
   await expect(page).toHaveURL(/theme=Community\+resilience/);
@@ -93,7 +96,7 @@ test('content and provider alternatives remain usable without JavaScript', async
   await page.goto('http://127.0.0.1:4322/projects/');
   await expect(page.locator('[data-project-card]')).toHaveCount(projects.length);
   await page.goto('http://127.0.0.1:4322/donate/');
-  await expect(page.getByRole('link', { name: 'Email the foundation about giving' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Visit the verified donation provider' })).toBeVisible();
   await context.close();
 });
 

@@ -12,6 +12,7 @@ content:
       - { name: tagline, type: string }
       - { name: description, type: text, required: true }
       - { name: email, type: string, required: true }
+      - { name: postalAddress, label: Published mailing address, type: string }
       - { name: ein, label: EIN, type: string }
       - { name: researchDate, type: string }
       - { name: impactAsOf, type: string }
@@ -89,3 +90,51 @@ content:
           - { name: slug, label: Project slug, type: string, required: true }
           - { name: oneTimeUrl, type: string }
           - { name: monthlyUrl, type: string }
+  - name: recovered-projects
+    label: Recovered project pages
+    type: file
+    path: src/data/legacy-projects.json
+    format: json
+    list: true
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: title, type: string, required: true }
+      - { name: name, type: string, required: true }
+      - { name: shortName, label: Card headline, type: string }
+      - { name: location, type: string }
+      - { name: countries, type: string, list: true }
+      - { name: theme, type: string }
+      - { name: status, type: string }
+      - { name: featured, type: boolean }
+      - { name: image, type: image }
+      - { name: imageAlt, type: string }
+      - { name: imageCaption, type: text }
+      - { name: summary, type: text }
+      - { name: leader, type: string }
+      - { name: bodyHtml, label: Source account HTML (sanitized on build), type: text }
+      - { name: source, label: Original source URL, type: string, required: true }
+      - { name: published, type: string }
+      - { name: modified, type: string }
+      - { name: reviewed, type: string }
+      - { name: outcomeNote, type: text }
+      - { name: outcomes, type: string, list: true }
+      - { name: challenge, type: text }
+      - { name: approach, type: text }
+      - { name: support, type: text }
+      - { name: externalUrl, type: string }
+  - name: recovered-resources
+    label: Resources, internships & campaigns
+    type: file
+    path: src/data/legacy-pages.json
+    format: json
+    list: true
+    fields:
+      - { name: path, label: Canonical path, type: string, required: true }
+      - { name: title, type: string, required: true }
+      - { name: category, type: string }
+      - { name: summary, type: text }
+      - { name: bodyHtml, label: Source account HTML (sanitized on build), type: text }
+      - { name: source, type: string, required: true }
+      - { name: published, type: string }
+      - { name: modified, type: string }
+      - { name: reviewed, type: string }

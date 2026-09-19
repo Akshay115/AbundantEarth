@@ -1,7 +1,11 @@
 import { readdir, readFile, writeFile, stat } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import assert from 'node:assert/strict';
-import projects from '../src/data/projects.json' with { type: 'json' };
+import baseProjects from '../src/data/projects.json' with { type: 'json' };
+import importedProjects from '../src/data/legacy-projects.json' with { type: 'json' };
+import legacyPages from '../src/data/legacy-pages.json' with { type: 'json' };
+import history from '../src/data/legacy-history.json' with { type: 'json' };
+import manifest from '../docs/migration-manifest.json' with { type: 'json' };
 import stories from '../src/data/stories.json' with { type: 'json' };
 import redirects from '../src/data/redirects.json' with { type: 'json' };
 import integrations from '../src/data/integrations.json' with { type: 'json' };
@@ -9,6 +13,7 @@ import vercel from '../vercel.json' with { type: 'json' };
 import { httpsUrl } from '../src/lib/integrations.mjs';
 
 const root = 'dist';
+const projects = [...baseProjects, ...importedProjects];
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   return (await Promise.all(entries.map(entry => entry.isDirectory() ? walk(join(dir, entry.name)) : [join(dir, entry.name)]))).flat();
@@ -27,6 +32,12 @@ for (const project of projects) {
   assert.ok(project.source && project.outcomeNote && project.status && project.imageCaption, `Missing provenance: ${project.slug}`);
 }
 for (const story of stories) assert.ok(slugs.includes(story.project), `Unknown project in ${story.slug}`);
+for (const url of manifest.excludedBlogUrls) {
+  const slug = new URL(url).pathname.split('/').filter(Boolean).at(-1);
+  assert.ok(!stories.some(story => story.slug === slug), `Old blog article must not be imported: ${slug}`);
+  assert.ok(!legacyPages.some(page => page.source === url), `Excluded blog source was imported: ${url}`);
+}
+assert.equal(new Set(history.map(record => record.slug)).size, history.length, 'History slugs must be unique');
 for (const item of integrations.projectDonationUrls) {
   assert.ok(slugs.includes(item.slug), `Unknown checkout project: ${item.slug}`);
   httpsUrl(item.oneTimeUrl); httpsUrl(item.monthlyUrl);
@@ -62,6 +73,9 @@ for (const [file, html] of content) {
 }
 for (const [from, to] of Object.entries(redirects)) {
   if (!targetFile(new URL(to, site).pathname)) errors.push(`Redirect ${from} has missing target ${to}`);
+}
+for (const entry of [...manifest.pages, ...manifest.campaigns]) {
+  if (entry.target && !targetFile(new URL(entry.target, site).pathname)) errors.push(`Uncovered original URL: ${entry.source} → ${entry.target}`);
 }
 assert.deepEqual(
   vercel.redirects,

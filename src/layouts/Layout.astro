@@ -4,6 +4,7 @@ import '@fontsource/dm-sans/500.css';
 import '@fontsource/dm-sans/600.css';
 import '@fontsource-variable/fraunces';
 import '../styles/global.css';
+import '../styles/migration.css';
 import { site } from '../lib/content';
 import Icon from '../components/Icon.astro';
 interface Props { title: string; description?: string; image?: string; noindex?: boolean; }
@@ -37,7 +38,7 @@ const structuredData = { '@context': 'https://schema.org', '@type': 'NGO', name:
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="topbar"><div class="container"><span>Rooted in community. Growing a better world.</span><a href="/get-support/">Looking for project support? <span aria-hidden="true">↗</span></a></div></div>
+    <div class="topbar"><div class="container"><span>Rooted in community. Growing a better world.</span><div class="utility-links"><a href="/search/">Search the site <span aria-hidden="true">⌕</span></a><a href="/get-support/">Looking for project support? <span aria-hidden="true">↗</span></a></div></div></div>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="/" aria-label="Abundant Earth Foundation home"><span class="brand-icon"><Icon name="leaf" /></span><span>abundant earth<small>F O U N D A T I O N</small></span></a>
@@ -52,12 +53,12 @@ const structuredData = { '@context': 'https://schema.org', '@type': 'NGO', name:
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand"><a class="brand" href="/"><span class="brand-icon"><Icon name="leaf" /></span><span>abundant earth<small>F O U N D A T I O N</small></span></a><p>A healthier Earth begins with<br />thriving communities.</p><div class="social-links">{site.social.map(s => <a href={s.url} rel="noopener noreferrer">{s.name}</a>)}</div></div>
-        <div><h2>Explore</h2><a href="/projects/">Our projects</a><a href="/impact/">Our impact</a><a href="/stories/">Stories from the field</a><a href="/resources/">Learning & resources</a></div>
-        <div><h2>Take part</h2><a href="/donate/">Make a gift</a><a href="/get-support/">Get project support</a><a href="/volunteer/">Volunteer with us</a><a href="/partnerships/">Become a partner</a><a href="/fiscal-sponsorship/">Fiscal sponsorship</a></div>
+        <div><h2>Explore</h2><a href="/projects/">Our projects</a><a href="/history/">Project map & history</a><a href="/impact/">Our impact</a><a href="/stories/">Stories from the field</a><a href="/resources/">Learning & resources</a><a href="/search/">Search the site</a></div>
+        <div><h2>Take part</h2><a href="/donate/">Make a gift</a><a href="/donor-support/">Donor support</a><a href="/get-support/">Get project support</a><a href="/volunteer/">Volunteer with us</a><a href="/internships/">Internship opportunities</a><a href="/partnerships/">Become a partner</a><a href="/fiscal-sponsorship/">Fiscal sponsorship</a></div>
         <div><h2>Get to know us</h2><a href="/about/">Our story & team</a><a href="/financials/">Financials & transparency</a><a href="/contact/">Contact us</a><a href="/newsletter/">Stay connected</a></div>
       </div>
-      <div class="container footer-bottom"><span>© {new Date().getFullYear()} Abundant Earth Foundation · EIN {site.ein}</span><div><a href="/privacy/">Privacy</a><a href="/accessibility/">Accessibility</a><a href="/sources/">Sources & credits</a></div></div>
-      {!live && <div class="preview-note">Redesign preview · Historical content is dated throughout. Online payments and subscriptions require verified provider setup.</div>}
+      <div class="container footer-bottom"><span>© {new Date().getFullYear()} Abundant Earth Foundation · EIN {site.ein}</span><div><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/accessibility/">Accessibility</a><a href="/sources/">Sources & credits</a></div></div>
+      {!live && <div class="preview-note">Redesign preview · Source accounts and historical records retain their reporting dates. Giving is handled by the foundation’s external donation provider.</div>}
     </footer>
     <script>
       const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');

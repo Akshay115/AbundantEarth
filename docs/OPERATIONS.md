@@ -6,17 +6,17 @@ The code builds static files in `dist/` and is deployed at **https://abundant-ea
 
 The first deployment was requested using the Vercel CLI’s API command with a GitHub `gitSource`, pinned to commit `e2de311a855adb7cb3f5c8382f6fac43090343e3`; the ready deployment ID is `dpl_GKcFo6dTfZoZvrzWHEUbtemBZFrg`. Subsequent pushes are built by the native Git integration. No local source files or prebuilt output were uploaded for deployment.
 
-`SITE_URL=https://abundant-earth.vercel.app` and `PUBLIC_SITE_LIVE=false` are configured for Vercel production and preview. The hosted redesign is non-indexable, includes a preview footer, and disallows crawling. The foundation’s custom domain, payment accounts, and newsletter provider remain to be connected.
+`SITE_URL=https://abundant-earth.vercel.app` and `PUBLIC_SITE_LIVE=false` are configured for Vercel production and preview. The hosted redesign is non-indexable, includes a preview footer, and disallows crawling. Public Give Lively handoffs are now connected for general giving and seven source-published project campaigns. The foundation’s custom domain and a working newsletter signup destination remain to be connected. See [non-blog migration notes](MIGRATION.md).
 
 `PUBLIC_SITE_LIVE=true` is a publication control, not authentication. Anyone with a preview URL can still access it. Use the hosting provider’s access controls if a private review is required.
 
 ## Required owner inputs
 
 1. Custom-domain/DNS access when moving from the Vercel URL to the foundation’s domain.
-2. Approved one-time and monthly donation provider URLs, plus project-specific destinations where available.
-3. A verified hosted newsletter signup URL with confirmation and unsubscribe handling.
+2. Any additional project-specific donation destinations; the seven recovered Give Lively routes are already configured. Confirm amount/frequency and receipts at the provider.
+3. A working hosted newsletter signup URL; the original Mailchimp endpoint returned HTTP 404.
 4. Current contact-mailbox availability, leadership roster, project status, and application availability.
-5. Approved brand treatment and photography reuse permissions; better TGE photography if available.
+5. Approved brand treatment and photography reuse permissions, and replacements for source images that could not be recovered.
 6. Actual provider identities and information-retention arrangements for the privacy page.
 
 Do not collect a donation into a developer’s account or infer payment ownership from a historical URL. The implemented handoff only uses explicitly configured public URLs.

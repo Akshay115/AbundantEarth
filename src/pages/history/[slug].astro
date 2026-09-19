@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import RichContent from '../../components/RichContent.astro';
+import Icon from '../../components/Icon.astro';
+import { history } from '../../lib/content';
+export function getStaticPaths() { return history.map(record => ({ params: { slug: record.slug }, props: { record } })); }
+const { record } = Astro.props;
+---
+<Layout title={record.title} description={record.summary || record.location}><PageIntro eyebrow={record.youth ? 'Youth in Permaculture · historical recipient' : 'From the project record'} title={record.title} description={record.location} /><section class="section container article-grid"><div><p class="notice"><strong>Historical record</strong>Recovered from AEF’s original project map on {record.reviewed}. Described plans, grant awards, and results retain their original context.</p><RichContent html={record.bodyHtml} /><p class="source-note"><a href={record.source}>Original foundation project map ↗</a></p></div><aside class="aside-card"><h2>Keep the connections growing.</h2><p>Have updated information about this project or recipient?</p><a class="button" href={`/contact/?topic=Project%20update&project=${encodeURIComponent(record.title)}`}>Share an update <Icon /></a><a class="text-link" href={record.youth ? '/history/?type=youth' : '/history/'}>Back to the records <Icon /></a></aside></section></Layout>

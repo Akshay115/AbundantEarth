@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import RichContent from '../../components/RichContent.astro';
+import { sourcePages } from '../../lib/content';
+const source = sourcePages.find(p => p.slug === 'projects-we-support')!;
+---
+<Layout title="Project & grant lists"><PageIntro eyebrow="The original project directory" title="A record of support, across the years." description="The foundation’s original project descriptions and annual support lists, retained with their historical context." /><section class="section container"><p class="notice">This source-page record includes historical project accounts and year-by-year lists. It is not a current grant ledger or an audited impact report. Source reviewed {source.reviewed}.</p><RichContent html={source.bodyHtml} /><p class="source-note"><a href={source.source}>Original project directory ↗</a></p></section></Layout>

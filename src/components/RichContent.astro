@@ -1,0 +1,5 @@
+---
+import { renderLegacyHtml } from '../lib/legacy';
+interface Props { html: string; }
+---
+<div class="prose legacy-content" set:html={renderLegacyHtml(Astro.props.html)} />

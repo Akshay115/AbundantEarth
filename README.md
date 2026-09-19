@@ -4,19 +4,26 @@ A researched, responsive redesign of **abundantearthfoundation.org**, built arou
 
 **Hosted site:** [abundant-earth.vercel.app](https://abundant-earth.vercel.app/)
 
-**Status:** deployed on Vercel directly from this GitHub repository. Pushes to `main` trigger Vercel production deployments. The site remains a clearly labeled, non-indexable redesign preview while verified payment/signup providers and current organizational details are confirmed. The foundation’s custom domain has not been connected.
+**Status:** deployed on Vercel directly from this GitHub repository. Pushes to `main` trigger production deployments. The non-blog migration restores the original project/resource content and official Give Lively handoffs. The site remains a non-indexable redesign preview; the foundation’s custom domain has not been connected. The original Mailchimp signup endpoint currently returns 404 and needs an owner-supplied replacement.
+
+**Blog instruction:** the old website’s **28 blog posts were not transferred**. The three existing editorial stories and their URLs remain unchanged. `/blog/` redirects to that existing Stories section; a second blog was not created.
 
 ![Abundant Earth Foundation homepage](docs/screenshots/home-desktop.webp)
 
 ## What is included
 
 - An editorial homepage with a warm green-and-cream design, responsive typography, and locally hosted project photography.
-- **28 pages**, including six project profiles, three archive-based stories, impact reporting, the foundation’s story and historical team, financials, learning resources, and participation pages.
+- **177 pages** (including the custom 404): 19 project profiles, 98 project/prize history records, the three existing stories, resource collections, internships, campaigns, impact, financials, and participation pages.
+- **13 additional project profiles** including Ecoversities, Ancient Cacao, Clean Cooking with Comics, Ho‘okele, ReGenerOsa, Rooted Connections, Love Letters, SunRise Studios, Mothers of the Amazon, Tiny Gardens, Deeper Roots, REAP, and Seaworthy Collective.
+- The original youth-prize program and **23 recipient records**, original year-by-year grant lists, podcast/video collections, and two newsletter-archive entry points.
+- An interactive history map with **74 recovered source coordinates**, zoom/reset, record-type/year/search filters, and a complete list for records without coordinates. No project coordinates are invented.
+- Site-wide search across projects, resource pages, existing stories, and historical records.
 - A project directory with combined text, focus-area, and country filters, shareable filter URLs, result announcements, and an empty state.
-- Giving journeys for general/project-specific and one-time/monthly support. Verified checkout URLs can be configured without changing templates.
+- Source-published Give Lively links for general giving and **seven project campaigns**. Donors confirm amount and frequency on the provider’s page; unconfigured projects retain a giving inquiry.
 - A newsletter-provider handoff and accessible contact, volunteering, sponsorship, and project-support inquiry helpers.
 - Honest integration states: unconfigured providers offer email inquiries; email drafts are reviewed and sent by the visitor. No simulated payments, submitted messages, or subscriptions.
-- **15 legacy redirects**, including inbound ARC donation links with preserved project selection.
+- **92 legacy redirects**, covering all 34 inventoried donation URLs and the non-blog page migration. Duplicate/plugin account routes lead to relevant support pages rather than simulated accounts or successful payments.
+- Updated source-attributed reach (200+ projects / 35+ countries), current published team biographies, contact details, closed funding-application status, 11 partner marks, and recovered source photography.
 - Search metadata, canonical URLs, NGO structured data, a sitemap, and environment-controlled indexing.
 - Keyboard navigation, reduced-motion support, meaningful image descriptions, native form validation, and no-JavaScript alternatives.
 - A [Pages CMS](https://pagescms.org/) configuration for Git-based editing of projects, stories, foundation settings, impact, and public provider links.
@@ -24,7 +31,7 @@ A researched, responsive redesign of **abundantearthfoundation.org**, built arou
 
 ## Run locally
 
-Use **Node.js 24 LTS** (minimum supported by this project: 22.12).
+Use **Node.js 24 LTS** for development, tests, and deployment. Astro’s minimum runtime is 22.12; the test suite uses Node 24’s native TypeScript support.
 
 ```bash
 npm ci
@@ -62,9 +69,9 @@ The verification suite includes:
 |---|---|
 | Astro/TypeScript | Templates, browser scripts, and test configuration |
 | Build verification | All generated local links and anchors, project/story references, required metadata, provider URL validation, and legacy redirect targets |
-| 70 browser checks | Desktop and mobile page rendering, automated WCAG A/AA scans, overflow, filters, form validation, draft generation, navigation, 404s, images, and no-JavaScript alternatives |
+| 182 browser checks | Desktop/mobile page rendering and WCAG A/AA scans, imported resource/project pages, map filters and zoom, site search, article exclusions, form validation, navigation, 404s, images, and no-JavaScript alternatives |
 | 6 provider-handoff checks | One-time and monthly checkout navigation, newsletter handoff, and protection against routing a project-specific gift to the general fund |
-| 4 unit checks | Missing integrations, unsafe URL rejection, encoded email drafts, and fund/frequency routing |
+| 8 unit checks | Provider routing, unsafe URL rejection, email encoding, HTML sanitization, migration inventory, blog exclusions, and preservation of project descriptions embedded in old GiveWP containers |
 
 `test:providers` builds with reserved `example.org` fixture URLs, intercepts those navigations locally, and **restores the normal build in a `finally` block**. It does not contact a payment provider or submit personal information. Do not run it concurrently with another build.
 
@@ -79,18 +86,25 @@ Core content is separated from page templates:
 | `src/data/site.json` | Mission description, public contact address, social links, historical reach, and application status |
 | `src/data/projects.json` | Project profiles, country/theme filters, outcome attribution, sources, and captions |
 | `src/data/stories.json` | Editorial stories and related project references |
+| `src/data/legacy-projects.json` | The 13 recovered standalone project accounts |
+| `src/data/legacy-history.json` | 98 original map/project/prize records and recovered coordinates |
+| `src/data/legacy-pages.json` | Resources, internships, source terms, and historical campaign entries |
+| `src/data/source-pages.json` | Source records used to refresh existing pages and annual lists |
+| `src/data/legacy-providers.json` | Original published provider links and newsletter endpoint provenance |
+| `docs/migration-manifest.json` | Decisions for every inventoried old page/donation URL, blog exclusions, image sources, and failed fetches |
 | `src/data/participation.json` | Volunteer, partnership, and fiscal-sponsorship copy |
 | `src/data/integrations.json` | Public, verified hosted checkout and newsletter URLs |
 | `src/data/redirects.json` | Old-to-new URL mappings |
 | `vercel.json` | Vercel build settings, HTTP 301 redirects, trailing-slash routing, and response headers |
 | `src/pages/financials.astro` | Year-specific public financial records |
 | `src/styles/global.css` | Shared design system and responsive rules |
+| `src/styles/migration.css` | Imported-content, map, search, and partner styles |
 
 For a browser-based editor, authorize the repository in [Pages CMS](https://app.pagescms.org/). It reads `.pages.yml` from the selected branch and saves content changes as Git commits. This configuration is included; the external CMS account/GitHub authorization is **not provisioned by this repository**.
 
 Keep project slugs stable. When changing a slug, update story references and add a legacy redirect in both `src/data/redirects.json` and `vercel.json`. Build checks enforce redirect parity and catch missing references and images. Keep figures, reporting dates, and source notes together; never substitute partner-wide results for AEF-attributable results.
 
-Image fields use an **image family name** such as `food-forest`, `education`, or `gardens`. A family has 480/960/1600 WebP variants in `public/images/`. Regenerate known source images with:
+Original curated image fields use an **image family name** such as `food-forest`, `education`, or `gardens`. A family has 480/960/1600 WebP variants in `public/images/`. Recovered images use local `/images/legacy/*.webp` paths and can be selected through the recovered-project CMS editor. Regenerate the original image families with:
 
 ```bash
 npm run media
@@ -98,7 +112,19 @@ npm run media
 npm run media -- education
 ```
 
-These commands require network access; normal builds use committed assets and do not. The TGE archive only yielded a 150px thumbnail, so the design displays it in an archival frame rather than enlarging it into a blurry hero. Replace it with an approved original when available. See [content and asset notes](docs/CONTENT.md).
+These commands require network access; normal builds use committed assets. The curated TGE thumbnail is displayed at its native size; additional source images are available inside the recovered project account. See [content and asset notes](docs/CONTENT.md).
+
+### Reproduce or refresh the non-blog import
+
+```bash
+npm run import:legacy
+```
+
+This fetches public WordPress pages, project-map records, donation metadata, and source images. It only requests post **metadata** to record exclusions; it never imports post bodies or edits `stories.json`. Long-form editorial pages (Biomimicry, Resilience, Bee the Change, and Larry Korn) are likewise left on the original site.
+
+The command regenerates the `legacy-*.json` datasets, `source-pages.json`, the migration manifest, local source images, the public-domain base map, and synchronized redirects. **Review its diff before committing:** rerunning it can replace manual edits to those generated datasets. Imported HTML is sanitized again during the build. Source scripts, embedded forms, events, tracking embeds, donor walls, and obsolete plugin UI are not executed or copied as working features.
+
+See [migration notes and remaining dependencies](docs/MIGRATION.md). Some original campaign pages are title-only or inaccessible; those are documented historical records, not reconstructed fundraising systems.
 
 ## Connect giving and newsletter services
 
@@ -112,7 +138,7 @@ PUBLIC_MONTHLY_DONATION_URL=
 PUBLIC_NEWSLETTER_URL=
 ```
 
-Alternatively, edit the corresponding fields in `src/data/integrations.json` / Pages CMS. Nonempty environment values take precedence.
+Alternatively, edit the corresponding fields in `src/data/integrations.json` / Pages CMS. Nonempty environment values take precedence. The file now includes the foundation’s published Give Lively general and seven project URLs. One-time/monthly choices use the same hosted page where appropriate; the visitor must confirm frequency there.
 
 For a project-specific provider page, add an entry to `projectDonationUrls`:
 
@@ -128,7 +154,9 @@ Replace those illustrative URLs with actual foundation-controlled provider links
 
 The site does not append guessed Stripe/PayPal parameters, create charges, or claim a successful payment. Donors choose the amount and confirm the final designation on the provider’s page. An unconfigured project checkout **never falls back silently to a general donation**.
 
-Newsletter signup occurs on a verified provider-hosted page, which should handle confirmation, unsubscribing, and subscriber records. Contact forms are intentionally browser-side email-draft helpers, not a message inbox or backend delivery service. The published contact mailbox’s deliverability has not been verified.
+The published Mailchimp endpoint and its hosted signup variant both returned **HTTP 404** during verification. `newsletterUrl` remains empty, and the page explains the upstream failure and provides an email inquiry. Supplying a working hosted signup URL enables the provider handoff. No fake subscription success is shown.
+
+Contact and impact-report helpers prepare an email for the visitor to send; there is no inbox backend. The original Individual Impact Report page exposes only a broken shortcode, so its private form definition cannot be recovered. Historical donor dashboards/history routes point to donor support; donor credentials, transactions, and recurring agreements are not migrated.
 
 ## Vercel deployment — GitHub-backed
 
@@ -168,16 +196,17 @@ Keep deployment source in GitHub: publish via Git pushes rather than `vercel dep
 
 Connect the approved custom domain in Vercel, update its DNS, and change `SITE_URL` to that canonical origin. Complete the remaining provider/content items in [operations](docs/OPERATIONS.md). When the foundation is ready for indexing, set `PUBLIC_SITE_LIVE=true` for production only and trigger a fresh Git-backed deployment. Keep preview environments non-indexable.
 
-Payment accounts, newsletter subscriptions, external CMS authorization, and the foundation’s DNS are not configured by this deployment.
+This deployment connects public donation handoffs, not payment-account administration. Newsletter account repair, external CMS authorization, and the foundation’s DNS remain owner tasks.
 
 ## Research and editorial basis
 
-The original site was unavailable during research. Most source pages were recovered from 2025 Wayback captures; funding application details came from January 2022. Public records were reviewed through ProPublica, and partner information through ARC and Eco-Designers.
+The original site was unavailable during the first research pass, which used 2025 Wayback captures and a January 2022 funding page. It became accessible during the follow-up inventory. The non-blog migration was recovered from its public API, current pages, map data, and sitemap on September 18, 2026. Public records also come from ProPublica and partner materials from ARC and Eco-Designers.
 
 The new site explicitly dates historical figures and team roles, distinguishes plans from outcomes, and links to source materials. Stories are editorial summaries of the archive, not invented interviews or fresh reporting.
 
 - [Research and design decisions](docs/RESEARCH.md)
 - [Content and photography provenance](docs/CONTENT.md)
 - [Launch, maintenance, and recovery](docs/OPERATIONS.md)
+- [Non-blog migration and outstanding dependencies](docs/MIGRATION.md)
 
 Project photographs and source materials remain the property of their respective rights holders. This repository does not grant a new license to third-party assets. Confirm reuse permissions before public release.

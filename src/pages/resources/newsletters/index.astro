@@ -1,0 +1,6 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PageIntro from '../../../components/PageIntro.astro';
+import { legacyPages } from '../../../lib/content';
+---
+<Layout title="Newsletter archive"><PageIntro eyebrow="A record of connection" title="From the foundation’s newsletter." description="Revisit the original newsletter issues recovered from the website. These historical issues link to the foundation’s published Mailchimp archives." /><section class="section container"><div class="feature-grid">{legacyPages.filter(p => p.path.startsWith('/resources/newsletters/')).map(page => <article class="feature-card"><h2 style="font-size:1.8rem"><a href={page.path}>{page.title}</a></h2><p>Original publication: {page.published}</p></article>)}</div><p class="source-note">Looking for future updates? <a href="/newsletter/">Visit newsletter signup</a>.</p></section></Layout>

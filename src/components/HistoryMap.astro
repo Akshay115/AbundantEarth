@@ -1,0 +1,25 @@
+---
+import { history } from '../lib/content';
+---
+<section class="history-map" id="map" aria-labelledby="map-title">
+  <p class="eyebrow">Places in the original project record</p><h2 id="map-title">A world of local roots.</h2>
+  <p>Explore the source-published locations. Markers represent historical records, not current project boundaries. The searchable list below includes records without coordinates.</p>
+  <div class="map-controls" hidden data-map-controls><button type="button" data-zoom="in" aria-label="Zoom into map">+</button><button type="button" data-zoom="out" aria-label="Zoom out of map">−</button><button type="button" data-zoom="reset">Reset view</button><span>Scroll the map area to explore when zoomed in.</span></div>
+  <div class="map-scroll" tabindex="0" aria-label="Project map; use the project list below for all records">
+    <div class="map-canvas" style="--map-scale:1">
+      <img src="/images/world-land.svg" width="720" height="360" alt="" />
+      {history.filter(record => record.coordinates).map(record => <a class="map-marker" style={`left:${(record.coordinates!.longitude + 180) / 3.6}%;top:${(90 - record.coordinates!.latitude) / 1.8}%;`} href={`/history/${record.slug}/`} title={record.location} aria-label={`Explore ${record.location}`} data-map-slug={record.slug}><span></span></a>)}
+    </div>
+  </div>
+  <p class="notice" id="map-unavailable" hidden>No source coordinates were recovered for these filtered records. Their complete source accounts remain available in the list below.</p>
+  <p class="source-note">Map coordinates recovered from AEF’s original map. Base map: Natural Earth, public domain, distributed with world-atlas.</p>
+</section>
+<script>
+  const canvas = document.querySelector<HTMLElement>('.map-canvas');
+  let scale = 1;
+  document.querySelector<HTMLElement>('[data-map-controls]')!.hidden = false;
+  document.querySelectorAll<HTMLButtonElement>('[data-zoom]').forEach(button => button.addEventListener('click', () => {
+    scale = button.dataset.zoom === 'reset' ? 1 : Math.min(5, Math.max(1, scale + (button.dataset.zoom === 'in' ? .5 : -.5)));
+    canvas?.style.setProperty('--map-scale', String(scale));
+  }));
+</script>

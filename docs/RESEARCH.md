@@ -1,5 +1,7 @@
 # Research and design decisions
 
+> Follow-up: the original site became accessible again. Its non-blog pages, map records, media, and donation inventory have now been recovered. The user explicitly excluded transferring the old blog articles. The sections below document the initial design/research stage; see [MIGRATION.md](MIGRATION.md) for current scope and implementation status.
+
 Research conducted September 18, 2026. Implementation follows the user-approved direction to redesign and develop abundantearthfoundation.org.
 
 ## Positioning

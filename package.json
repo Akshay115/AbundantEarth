@@ -12,14 +12,22 @@
     "test": "playwright test",
     "test:unit": "node --test tests/*.test.mjs",
     "test:providers": "node scripts/test-providers.mjs",
-    "media": "node scripts/fetch-media.mjs"
+    "media": "node scripts/fetch-media.mjs",
+    "import:legacy": "node scripts/import-legacy.mjs",
+    "map": "node scripts/render-map.mjs"
   },
   "dependencies": {
+    "cheerio": "^1.1.2",
+    "sanitize-html": "^2.17.0",
     "astro": "^7.3.3",
     "@fontsource/dm-sans": "^5.3.0",
     "@fontsource-variable/fraunces": "^5.3.0"
   },
   "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "@types/sanitize-html": "^2.16.0",
+    "world-atlas": "^2.0.2",
+    "topojson-client": "^3.1.0",
     "@types/node": "^24.0.0",
     "@astrojs/check": "^0.9.10",
     "@axe-core/playwright": "^4.10.2",

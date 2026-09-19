@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import RichContent from '../components/RichContent.astro';
+import Icon from '../components/Icon.astro';
+import { legacyPages } from '../lib/content';
+export function getStaticPaths() { return legacyPages.map(page => ({ params: { legacy: page.path.replace(/^\/|\/$/g, '') }, props: { page } })); }
+const { page } = Astro.props;
+const internship = page.category === 'Internships';
+---
+<Layout title={page.title} description={page.summary || `${page.title}: a record from Abundant Earth Foundation’s original website.`}>
+  <PageIntro eyebrow={page.category} title={page.title} description={internship ? 'Explore the opportunities described by the foundation. Ask the team to confirm availability before preparing an application.' : 'Recovered from the foundation’s original website, with its original context and source information.'} />
+  <section class="section container article-grid">
+    <div><p class="notice"><strong>Source record · reviewed {page.reviewed}</strong>{page.modified ? `Original page last updated ${page.modified}. ` : ''}{internship ? 'The source describes historical opportunities. Listed deadlines and hours are not a guarantee of a current vacancy.' : 'References to current activity, targets, or upcoming dates reflect the source account. Contact the foundation for the latest status.'}</p>{page.path === '/youth/' && <a class="button button-outline" style="margin-top:24px" href="/history/?type=youth">Explore all 23 recipient records <Icon /></a>}<RichContent html={page.bodyHtml} /><p class="source-note"><a href={page.source}>Read the original source ↗</a></p></div>
+    <aside class="aside-card"><h2>{internship ? 'Find your next step.' : 'Keep exploring.'}</h2><p>Questions about this work, an opportunity, or a past campaign?</p><a class="button" href={`/contact/?topic=${internship ? 'Volunteering' : 'General%20inquiry'}`}>Start a conversation <Icon /></a><a class="text-link" href={internship ? '/internships/' : '/resources/'}>{internship ? 'All internships' : 'Learning & resources'} <Icon /></a><a class="text-link" href="/history/">Project history <Icon /></a><a class="text-link" href="/campaigns/">Campaign directory <Icon /></a></aside>
+  </section>
+</Layout>

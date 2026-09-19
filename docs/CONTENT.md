@@ -1,5 +1,11 @@
 # Content and asset provenance
 
+## Non-blog migration update
+
+The follow-up migration adds `legacy-projects.json`, `legacy-history.json`, `legacy-pages.json`, `source-pages.json`, and `legacy-partners.json`. Exact source URLs and 224 recovered image entries are recorded in `migration-manifest.json`. New image paths use `/images/legacy/*.webp`; `Photo.astro` supports these direct local paths alongside the original image-family system.
+
+The old blog posts and long-form editorial pages were **not transferred**. The three original entries in `stories.json` are unchanged. See [MIGRATION.md](MIGRATION.md) for the inventory, exclusions, provider status, and missing source assets.
+
 ## Editorial model
 
 Projects live in `src/data/projects.json`. Each contains a stable slug, title, location, country filters, theme, historical status, lead description, challenge, approach, AEF support, reported outcomes, reporting note, source, and image caption.

@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+---
+<Layout title="Search the site"><PageIntro eyebrow="Follow your curiosity" title="Find a connection." description="Search projects, historical records, resources, opportunities, and the site’s existing stories." /><section class="section container"><form id="site-search-form" role="search"><label>Search the site<input type="search" name="q" id="site-search" placeholder="Try food forests, internships, Kenya…" /></label><button class="button" type="submit" style="margin-top:18px">Search</button></form><p role="status" aria-live="polite" id="search-status" class="section-note">Enter a topic to search.</p><div id="search-results" class="history-grid"></div><noscript><p class="notice">Search needs JavaScript. Browse <a href="/projects/">projects</a>, <a href="/history/">history</a>, or <a href="/resources/">resources</a> directly.</p></noscript></section>
+  <script>
+    type Result = { title: string; url: string; type: string; description: string; text: string };
+    const form = document.querySelector<HTMLFormElement>('#site-search-form')!;
+    const input = document.querySelector<HTMLInputElement>('#site-search')!;
+    const status = document.querySelector('#search-status')!;
+    const results = document.querySelector('#search-results')!;
+    let records: Result[] | undefined;
+    let request = 0;
+    async function search() {
+      const current = ++request; const query = input.value.trim();
+      results.replaceChildren();
+      if (!query) { status.textContent = 'Enter a topic to search.'; return; }
+      status.textContent = 'Searching…';
+      try {
+        if (!records) { const response = await fetch('/search-index.json'); if (!response.ok) throw new Error(); records = await response.json(); }
+        if (current !== request) return;
+        const terms = query.toLowerCase().split(/\s+/);
+        const matches = records!.filter(r => terms.every(term => `${r.title} ${r.text}`.toLowerCase().includes(term))).sort((a, b) => Number(b.title.toLowerCase().includes(query.toLowerCase())) - Number(a.title.toLowerCase().includes(query.toLowerCase())));
+        status.textContent = `${matches.length} ${matches.length === 1 ? 'result' : 'results'} found.`;
+        for (const result of matches) {
+          const article = document.createElement('article'); article.className = 'history-card';
+          const category = document.createElement('p'); category.className = 'eyebrow'; category.textContent = result.type;
+          const heading = document.createElement('h2'); const link = document.createElement('a'); link.href = result.url; link.textContent = result.title; heading.append(link);
+          const description = document.createElement('p'); description.textContent = result.description.slice(0, 230);
+          article.append(category, heading, description); results.append(article);
+        }
+        const url = new URL(location.href); url.searchParams.set('q', query); history.replaceState(null, '', url);
+      } catch { status.textContent = 'Search could not load. Please try again or use the navigation below.'; }
+    }
+    form.addEventListener('submit', event => { event.preventDefault(); search(); });
+    input.value = new URLSearchParams(location.search).get('q') || ''; if (input.value) search();
+  </script>
+</Layout>
