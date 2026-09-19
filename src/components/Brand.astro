@@ -1,0 +1,8 @@
+---
+import brand from '../data/brand.json';
+interface Props { footer?: boolean; }
+const { footer = false } = Astro.props;
+---
+<a class="brand" href="/" aria-label="Abundant Earth Foundation home">
+  <img class="brand-logo" src={brand.logo} alt={brand.name} width={brand.width} height={brand.height} loading={footer ? 'lazy' : 'eager'} decoding="async" />
+</a>

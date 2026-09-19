@@ -47,10 +47,17 @@ Pages CMS media uploads alone do not generate these variants. A developer must p
 
 ## Fonts and identity
 
+The primary header/footer logo now uses the original foundation artwork rather than the redesign’s typeset wordmark. The favicon and Apple touch icon use the original standalone spiral/leaf symbol; no text is included in those images.
+
+- Full logo source: `https://abundantearthfoundation.org/wp-content/uploads/2023/06/AEF-website-regina-logo.png`
+- Symbol-only source: `https://abundantearthfoundation.org/wp-content/uploads/2020/12/logo-AEF-only.png`
+- Regeneration: `npm run branding` (`scripts/prepare-branding.mjs`). It trims outer padding, resizes the actual source artwork, and creates SVG/PNG/ICO/touch-icon variants. The SVG favicon embeds the source-derived raster symbol; it is not a newly traced or retyped logo.
+- `src/data/brand.json` records the source URLs and output dimensions. `Brand.astro` renders the same logo consistently in the header and footer.
+
 - Fraunces Variable: `@fontsource-variable/fraunces`, SIL Open Font License.
 - DM Sans: `@fontsource/dm-sans`, SIL Open Font License.
 - Font files are bundled locally. License files are distributed with the packages.
-- The leaf mark, SVG line icons, layout, and decorative patterns were created for this redesign. Confirm brand approval before adopting them as the official identity.
+- The layout, decorative leaf/line icons, and background patterns were created for the redesign. They are decorative elements; the primary brand and favicon are the original foundation artwork identified above.
 
 ## Sources on the public site
 

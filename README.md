@@ -29,6 +29,18 @@ A researched, responsive redesign of **abundantearthfoundation.org**, built arou
 - A [Pages CMS](https://pagescms.org/) configuration for Git-based editing of projects, stories, foundation settings, impact, and public provider links.
 - GitHub Actions checks and downloadable static-build artifacts.
 
+### Original foundation branding
+
+The header and footer use the **original Abundant Earth Foundation logo** recovered from the old website’s media library. Favicons use the separately published **blue-and-green spiral/leaf symbol only, with no lettering**.
+
+- Logo: `public/images/brand/logo.png` (trimmed from the original high-resolution wordmark).
+- Symbol: `public/images/brand/symbol.png` (original symbol-only artwork).
+- Browser icons: `favicon.svg`, 16px/32px PNGs, and `favicon.ico`.
+- Apple touch icon: `apple-touch-icon.png`, also symbol-only.
+- Original source URLs and logo dimensions: `src/data/brand.json`.
+
+Use `npm run branding` to regenerate these assets from the original source images. This maintenance command requires network access; ordinary builds use the committed local files. Favicon links include a version parameter so browsers can refresh the previous icon.
+
 ### Layout review
 
 Reviewed all **176 content pages at 320, 390, 768, 1024, and 1440px** (880 page/width checks), with visual review of the shared page layouts. The revised build has no detected page overflow, clipped text, or undersized columns in that review.
@@ -102,6 +114,7 @@ Core content is separated from page templates:
 | File | Purpose |
 |---|---|
 | `src/data/site.json` | Mission description, public contact address, social links, historical reach, and application status |
+| `src/data/brand.json` | Original logo/symbol provenance, local asset paths, and intrinsic logo dimensions |
 | `src/data/projects.json` | Project profiles, country/theme filters, outcome attribution, sources, and captions |
 | `src/data/stories.json` | Editorial stories and related project references |
 | `src/data/legacy-projects.json` | The 13 recovered standalone project accounts |

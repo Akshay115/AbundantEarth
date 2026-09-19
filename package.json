@@ -15,7 +15,8 @@
     "media": "node scripts/fetch-media.mjs",
     "import:legacy": "node scripts/import-legacy.mjs",
     "map": "node scripts/render-map.mjs",
-    "review:layouts": "node scripts/review-layouts.mjs"
+    "review:layouts": "node scripts/review-layouts.mjs",
+    "branding": "node scripts/prepare-branding.mjs"
   },
   "dependencies": {
     "cheerio": "^1.1.2",
