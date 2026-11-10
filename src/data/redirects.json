@@ -19,8 +19,8 @@
   "/ancientcacao/": "/projects/ancient-cacao/",
   "/clean-energy-with-comics/": "/projects/clean-cooking-with-comics/",
   "/donate-copy/": "/donate/",
-  "/hookele-industries/": "/projects/hookele-industries/",
-  "/hookele-industries-a-free-market-solution-to-overfishing/": "/projects/hookele-industries/",
+  "/hookele-industries/": "/projects/",
+  "/hookele-industries-a-free-market-solution-to-overfishing/": "/projects/",
   "/osa/": "/projects/regenerosa-collective/",
   "/rooted-connections/": "/projects/rooted-connections/",
   "/love-letters/": "/projects/love-letters/",
@@ -89,6 +89,6 @@
   "/donations/osa/": "/donate/?project=regenerosa-collective",
   "/donations/ancientcacao/": "/donate/?project=ancient-cacao",
   "/donations/givewp-donation-form/": "/donate/",
-  "/donations/hookele-industries-a-free-market-solution-to-overfishing/": "/donate/?project=hookele-industries",
+  "/donations/hookele-industries-a-free-market-solution-to-overfishing/": "/donate/",
   "/donations/powering-clean-energy-with-comics-a-biogas-education-pilot/": "/donate/?project=clean-cooking-with-comics"
 }

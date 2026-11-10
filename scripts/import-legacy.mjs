@@ -13,7 +13,6 @@ const projectSlugs = {
   'ecoversities': ['Ecoversities', 'Latin America', [], 'Youth & learning'],
   'ancientcacao': ['Ancient Cacao · Friends of Montegrande', 'Jaén, Peru', ['Peru'], 'Culture & community'],
   'clean-energy-with-comics': ['Powering Clean Cooking with Comics', 'Haiti & Africa', ['Haiti'], 'Community resilience'],
-  'hookele-industries': ['Ho‘okele Industries', 'Community aquaculture', [], 'Oceans & ecosystems'],
   'osa': ['ReGenerOsa Collective', 'Osa Peninsula, Costa Rica', ['Costa Rica'], 'Oceans & ecosystems'],
   'rooted-connections': ['Rooted Connections', 'East Africa', [], 'Culture & community'],
   'the-love-letters-project': ['The Love Letters Project', 'California & international', ['United States'], 'Culture & community'],
@@ -36,7 +35,7 @@ const pageRoutes = {
 const excludedPages = new Set(['articles', 'bee-the-change', 'biomimicry', 'resilience', 'larrykorn']);
 const aliases = {
   'donate-copy': '/donate/', 'maptest': '/history/#map', 'love-letters': '/projects/love-letters/',
-  'hookele-industries-a-free-market-solution-to-overfishing': '/projects/hookele-industries/',
+  'hookele-industries-a-free-market-solution-to-overfishing': '/projects/',
   'individual-impact-report': '/report-impact/',
   'donor-dashboard': '/donor-support/', 'donor-dashboard-2': '/donor-support/', 'donor-dashboard-3': '/donor-support/',
   'recurring-donations': '/donor-support/#recurring', 'recurring-donations-2': '/donor-support/#recurring',
@@ -200,7 +199,7 @@ const donationMap = {
   'donate-to-deeper-roots': 'deeper-roots', 'donate-to-tiny-gardens': 'tiny-gardens', 'donate-to-youth-in-permaculture-prize': 'youth-in-permaculture',
   'donate-to-mothers-of-the-amazon': 'mothers-of-the-amazon', 'donate-to-sunrise-studio-collective': 'sunrise-studios-collective',
   'donate-to-regenerative-holistic-resource-center': 'regenerative-holistic-resource-center',
-  'hookele-industries-a-free-market-solution-to-overfishing': 'hookele-industries', 'powering-clean-energy-with-comics-a-biogas-education-pilot': 'clean-cooking-with-comics',
+  'powering-clean-energy-with-comics-a-biogas-education-pilot': 'clean-cooking-with-comics',
 };
 for (const url of donationURLs) {
   const path = new URL(url).pathname; const slug = path.split('/').filter(Boolean).at(-1);

@@ -13,12 +13,12 @@ A researched, responsive redesign of **abundantearthfoundation.org**, built arou
 ## What is included
 
 - An editorial homepage with a warm green-and-cream design, responsive typography, and locally hosted project photography.
-- **177 pages** (including the custom 404): 19 project profiles, 98 project/prize history records, the three existing stories, resource collections, internships, campaigns, impact, financials, and participation pages.
-- **13 additional project profiles** including Ecoversities, Ancient Cacao, Clean Cooking with Comics, Ho‘okele, ReGenerOsa, Rooted Connections, Love Letters, SunRise Studios, Mothers of the Amazon, Tiny Gardens, Deeper Roots, REAP, and Seaworthy Collective.
+- **177 pages** (including the custom 404): 18 project profiles, 98 project/prize history records, the three existing stories, resource collections, internships, campaigns, impact, financials, and participation pages.
+- **12 additional project profiles** including Ecoversities, Ancient Cacao, Clean Cooking with Comics, ReGenerOsa, Rooted Connections, Love Letters, SunRise Studios, Mothers of the Amazon, Tiny Gardens, Deeper Roots, REAP, and Seaworthy Collective.
 - The original youth-prize program and **23 recipient records**, original year-by-year grant lists, podcast/video collections, and two newsletter-archive entry points.
 - An interactive history map with **74 recovered source coordinates**, zoom/reset, record-type/year/search filters, and a complete list for records without coordinates. No project coordinates are invented.
 - Site-wide search across projects, resource pages, existing stories, and historical records.
-- A project directory with combined text, focus-area, and country filters, shareable filter URLs, result announcements, and an empty state.
+- A project directory split into **Current Projects** and **Past Projects** sections. To move a project, change its `section` field (`current` or `past`) in `src/data/projects.json` or `src/data/legacy-projects.json` (or via Pages CMS). There is no search or filter bar.
 - Source-published Give Lively links for general giving and **seven project campaigns**. Donors confirm amount and frequency on the provider’s page; unconfigured projects retain a giving inquiry.
 - A newsletter-provider handoff and accessible contact, volunteering, sponsorship, and project-support inquiry helpers.
 - Honest integration states: unconfigured providers offer email inquiries; email drafts are reviewed and sent by the visitor. No simulated payments, submitted messages, or subscriptions.
@@ -117,7 +117,7 @@ Core content is separated from page templates:
 | `src/data/brand.json` | Original logo/symbol provenance, local asset paths, and intrinsic logo dimensions |
 | `src/data/projects.json` | Project profiles, country/theme filters, outcome attribution, sources, and captions |
 | `src/data/stories.json` | Editorial stories and related project references |
-| `src/data/legacy-projects.json` | The 13 recovered standalone project accounts |
+| `src/data/legacy-projects.json` | The 12 recovered standalone project accounts |
 | `src/data/legacy-history.json` | 98 original map/project/prize records and recovered coordinates |
 | `src/data/legacy-pages.json` | Resources, internships, source terms, and historical campaign entries |
 | `src/data/source-pages.json` | Source records used to refresh existing pages and annual lists |

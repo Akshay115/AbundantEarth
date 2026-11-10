@@ -44,6 +44,7 @@ content:
       - { name: location, type: string, required: true }
       - { name: countries, type: string, list: true }
       - { name: theme, type: select, options: { values: ['Food & forests', 'Community resilience', 'Youth & learning'] } }
+      - { name: section, label: Section, type: select, options: { values: ['current', 'past'] } }
       - { name: status, type: string, required: true }
       - { name: featured, type: boolean }
       - { name: image, label: Image family (see README), type: string, required: true }

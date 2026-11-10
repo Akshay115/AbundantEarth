@@ -4,7 +4,13 @@
     "name": "Agroforestry Regeneration Communities",
     "shortName": "Growing forests. Growing futures.",
     "location": "East Africa & Central America",
-    "countries": ["Guatemala", "Malawi", "Uganda", "Kenya", "Tanzania"],
+    "countries": [
+      "Guatemala",
+      "Malawi",
+      "Uganda",
+      "Kenya",
+      "Tanzania"
+    ],
     "theme": "Food & forests",
     "status": "Documented in 2025",
     "featured": true,
@@ -16,17 +22,24 @@
     "challenge": "Smallholder farming communities face unpredictable weather, declining soil health, and barriers to training and resources. Food forests bring food production and ecosystem restoration together.",
     "approach": "Launched in April 2021, ARC connects farmers with regenerative agriculture and agroforestry education. Its model takes experienced teachers to communities, helping local people develop skills where they live and grow food.",
     "support": "AEF’s archived materials describe support for ARC through fundraising, grants for teachers, and connections across the regenerative agriculture community.",
-    "outcomes": ["4,344,207 trees planted", "8,954 food forests established", "23,163 people trained; 55% women"],
+    "outcomes": [
+      "4,344,207 trees planted",
+      "8,954 food forests established",
+      "23,163 people trained; 55% women"
+    ],
     "outcomeNote": "Cumulative ARC figures reported on AEF’s 2025 website. These describe partner-network results, not outcomes attributable solely to AEF. The underlying reporting period was not specified.",
     "source": "https://web.archive.org/web/20251006145156/https://abundantearthfoundation.org/agroforestry-regeneration-communities/",
-    "externalUrl": "https://agroforestryrc.org/"
+    "externalUrl": "https://agroforestryrc.org/",
+    "section": "current"
   },
   {
     "slug": "towards-green-environment",
     "name": "Towards Green Environment",
     "shortName": "Resilience begins with community.",
     "location": "Osodo Village, Kenya",
-    "countries": ["Kenya"],
+    "countries": [
+      "Kenya"
+    ],
     "theme": "Community resilience",
     "status": "Documented in 2025",
     "featured": true,
@@ -38,17 +51,24 @@
     "challenge": "Flooding has disrupted life in Osodo Village. Families need immediate practical support as well as the knowledge and resources to adapt to a changing climate.",
     "approach": "The team combines environmental awareness, training, and community support. Its documented work includes food for children, menstrual products for women and girls, and mosquito nets to reduce malaria risk.",
     "support": "AEF’s archived homepage credits its support with helping TGE continue feeding children and providing essential supplies to the community.",
-    "outcomes": ["200 mosquito nets distributed", "Food support for children in Osodo Village", "Menstrual products supplied to women in the community"],
+    "outcomes": [
+      "200 mosquito nets distributed",
+      "Food support for children in Osodo Village",
+      "Menstrual products supplied to women in the community"
+    ],
     "outcomeNote": "Activities reported on the archived August 2025 homepage; quantities and needs have not been reverified for the current year.",
     "source": "https://web.archive.org/web/20250812100538/https://abundantearthfoundation.org/",
-    "externalUrl": ""
+    "externalUrl": "",
+    "section": "current"
   },
   {
     "slug": "beyond-organic-design",
     "name": "Beyond Organic Design",
     "shortName": "A new generation of possibility.",
     "location": "New York, United States",
-    "countries": ["United States"],
+    "countries": [
+      "United States"
+    ],
     "theme": "Youth & learning",
     "status": "Documented in 2025",
     "featured": true,
@@ -60,17 +80,29 @@
     "challenge": "Young people need practical ways to respond to environmental challenges, including in densely built urban places. Education can turn concern into confidence and useful skills.",
     "approach": "BOD’s Eco-Designers program brings permaculture design, hands-on learning, and educator development into schools. Its customizable curriculum connects environmental thinking with students’ everyday surroundings.",
     "support": "AEF featured BOD as a supported project and offered a dedicated fundraising pathway for its educational work.",
-    "outcomes": ["More than 6,165 young people reached by BOD’s courses", "A customizable Eco-Designers curriculum", "Professional development for educators"],
+    "outcomes": [
+      "More than 6,165 young people reached by BOD’s courses",
+      "A customizable Eco-Designers curriculum",
+      "Professional development for educators"
+    ],
     "outcomeNote": "BOD’s cumulative reach as reported on AEF’s 2025 homepage, rather than a count of students funded solely by AEF.",
     "source": "https://web.archive.org/web/20250812100538/https://abundantearthfoundation.org/",
-    "externalUrl": "https://www.eco-designers.com/"
+    "externalUrl": "https://www.eco-designers.com/",
+    "section": "current"
   },
   {
     "slug": "youth-in-permaculture",
     "name": "Youth in Permaculture Prize",
     "shortName": "Small grants. Young changemakers.",
     "location": "An international youth network",
-    "countries": ["Uganda", "Kenya", "Ecuador", "Australia", "Malawi", "United States"],
+    "countries": [
+      "Uganda",
+      "Kenya",
+      "Ecuador",
+      "Australia",
+      "Malawi",
+      "United States"
+    ],
     "theme": "Youth & learning",
     "status": "Historical initiative",
     "featured": false,
@@ -82,17 +114,24 @@
     "challenge": "Young people have ideas and local knowledge, but often lack the funding and practical support to put them into action.",
     "approach": "The prize supported youth-led initiatives such as kitchen gardens, school learning spaces, native forests, and permaculture education. Archived recipient stories span 2018–2022.",
     "support": "AEF’s project directory describes financial awards to youth-led projects. Its archive preserves individual recipients’ plans and the purposes for which the awards were made.",
-    "outcomes": ["23 youth-led projects in 15 countries, as reported in the project directory", "Brenda Nakafeero’s kitchen-garden and learning-center plans in Uganda", "School and community education projects across multiple regions"],
+    "outcomes": [
+      "23 youth-led projects in 15 countries, as reported in the project directory",
+      "Brenda Nakafeero’s kitchen-garden and learning-center plans in Uganda",
+      "School and community education projects across multiple regions"
+    ],
     "outcomeNote": "Historical program reporting. Recipient plans are not presented as verified completed outcomes. No current prize round is advertised here.",
     "source": "https://web.archive.org/web/20250520032712/https://abundantearthfoundation.org/projects-we-support/",
-    "externalUrl": ""
+    "externalUrl": "",
+    "section": "past"
   },
   {
     "slug": "regenerative-holistic-resource-center",
     "name": "Regenerative Holistic Resource Center",
     "shortName": "Knowledge that takes root.",
     "location": "Kenya",
-    "countries": ["Kenya"],
+    "countries": [
+      "Kenya"
+    ],
     "theme": "Food & forests",
     "status": "Documented in 2025",
     "featured": false,
@@ -104,17 +143,23 @@
     "challenge": "Communities need access to practical regenerative farming knowledge and support for vulnerable children and families.",
     "approach": "The center provides hands-on learning in syntropic agroforestry and permaculture, sharing techniques that participants can put to use in their own communities.",
     "support": "AEF’s project directory describes support for Willis Orum’s training work, and its donation page includes a dedicated pathway for the center.",
-    "outcomes": ["Hands-on community training described in AEF’s project directory", "A dedicated fundraising pathway in the archived AEF website"],
+    "outcomes": [
+      "Hands-on community training described in AEF’s project directory",
+      "A dedicated fundraising pathway in the archived AEF website"
+    ],
     "outcomeNote": "Historical description of activities. Current participant counts and program availability require an update from the project.",
     "source": "https://web.archive.org/web/20250520032712/https://abundantearthfoundation.org/projects-we-support/",
-    "externalUrl": ""
+    "externalUrl": "",
+    "section": "past"
   },
   {
     "slug": "refarmers",
     "name": "Refarmers · Grandmothers’ Kitchen Gardens",
     "shortName": "Nourishment, close to home.",
     "location": "Kitgum, Uganda",
-    "countries": ["Uganda"],
+    "countries": [
+      "Uganda"
+    ],
     "theme": "Community resilience",
     "status": "Historical initiative",
     "featured": false,
@@ -126,9 +171,13 @@
     "challenge": "Older people, mothers, and children can be particularly exposed to food insecurity. Gardens close to home offer one practical way to improve access to fresh food.",
     "approach": "The archived project story describes kitchen gardens in Kitgum and opportunities to share permaculture knowledge with young people and families.",
     "support": "AEF listed Refarmers among its supported projects and documented Ola Tom Lakere’s 2020 Youth in Permaculture Prize award connected to this work.",
-    "outcomes": ["Kitchen-garden work documented in Kitgum", "Support for permaculture learning and youth knowledge-sharing"],
+    "outcomes": [
+      "Kitchen-garden work documented in Kitgum",
+      "Support for permaculture learning and youth knowledge-sharing"
+    ],
     "outcomeNote": "A historical project profile drawn from AEF’s archive. No current funding target or beneficiary total is asserted.",
     "source": "https://web.archive.org/web/20250812100538/https://abundantearthfoundation.org/",
-    "externalUrl": "https://refarmers.org/"
+    "externalUrl": "https://refarmers.org/",
+    "section": "past"
   }
 ]

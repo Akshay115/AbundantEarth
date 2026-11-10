@@ -108,12 +108,12 @@
     },
     {
       "source": "/hookele-industries/",
-      "destination": "/projects/hookele-industries/",
+      "destination": "/projects/",
       "statusCode": 301
     },
     {
       "source": "/hookele-industries-a-free-market-solution-to-overfishing/",
-      "destination": "/projects/hookele-industries/",
+      "destination": "/projects/",
       "statusCode": 301
     },
     {
@@ -458,7 +458,7 @@
     },
     {
       "source": "/donations/hookele-industries-a-free-market-solution-to-overfishing/",
-      "destination": "/donate/?project=hookele-industries",
+      "destination": "/donate/",
       "statusCode": 301
     },
     {

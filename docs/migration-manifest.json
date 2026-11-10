@@ -60,12 +60,12 @@
     {
       "source": "/hookele-industries/",
       "decision": "migrated",
-      "target": "/projects/hookele-industries/"
+      "target": "/projects/"
     },
     {
       "source": "/hookele-industries-a-free-market-solution-to-overfishing/",
       "decision": "consolidated",
-      "target": "/projects/hookele-industries/"
+      "target": "/projects/"
     },
     {
       "source": "/osa/",
@@ -522,7 +522,7 @@
     {
       "source": "/donations/hookele-industries-a-free-market-solution-to-overfishing/",
       "decision": "consolidated",
-      "target": "/donate/?project=hookele-industries"
+      "target": "/donate/"
     },
     {
       "source": "/donations/powering-clean-energy-with-comics-a-biogas-education-pilot/",

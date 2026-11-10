@@ -445,3 +445,6 @@
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
 }
+.directory .group-title { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 30px; }
+.directory .project-group + .project-group { margin-top: 80px; padding-top: 50px; border-top: 1px solid var(--line); }
+.directory .card-copy h3 { font-size: 2.1rem; line-height: 1.15; }
